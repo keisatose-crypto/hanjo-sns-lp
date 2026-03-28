@@ -9,27 +9,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --bg-light:  #faf8f5;
+      --bg-white:  #ffffff;
+      --bg-gray:   #f5f2ed;
       --bg-dark:   #1a1a1a;
-      --bg-card:   #f0ece7;
       --text-main: #222222;
       --text-sub:  #666666;
-      --ig: linear-gradient(135deg, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45);
-      --ig-solid: #C13584;
+      --accent:    #c85a1a;
     }
     body {
       font-family: 'Noto Sans JP', sans-serif;
       -webkit-font-smoothing: antialiased;
       color: var(--text-main);
-      background: var(--bg-light);
+      background: var(--bg-white);
     }
-    .ig-text {
-      background: var(--ig);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .ig-bg { background: var(--ig); }
+    .accent-text { color: var(--accent); }
+    .accent-bg   { background: var(--accent); }
 
     .rv { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
     .rv.on { opacity: 1; transform: none; }
@@ -42,10 +36,6 @@
     .faq-open .faq-body { max-height: 500px; }
     .faq-icon { transition: transform .3s; display: inline-block; }
     .faq-open .faq-icon { transform: rotate(45deg); }
-
-    .section-light { background: var(--bg-light); }
-    .section-dark  { background: var(--bg-dark); }
-    .section-card  { background: var(--bg-card); }
   </style>
 </head>
 <body>
@@ -54,53 +44,50 @@
 <!-- ════════════════════════════════════
   HEADER
 ════════════════════════════════════ -->
-<header style="background:var(--bg-light);border-bottom:1px solid #e5e0da;"
+<header style="background:var(--bg-white);border-bottom:1px solid #e5e0da;"
         class="sticky top-0 z-50 backdrop-blur-md">
   <div class="max-w-4xl mx-auto px-6 py-4">
     <div class="font-black tracking-widest" style="font-size:1.15rem;color:var(--text-main);">
-      繁盛<span class="ig-text">SNS</span>
+      繁盛<span class="accent-text">SNS</span>
     </div>
   </div>
 </header>
 
 
 <!-- ════════════════════════════════════
-  HERO（暗背景 ＋ IGぼかし円）
+  HERO（写真背景＋暗オーバーレイ）
 ════════════════════════════════════ -->
-<section class="section-dark py-24 px-6 relative overflow-hidden">
+<section class="relative py-28 px-6 overflow-hidden"
+         style="background:url('hero-bg.jpg') center/cover no-repeat;">
 
-  <!-- 背景装飾：IGカラーのぼかし円 -->
-  <div class="absolute -top-24 -right-20 w-96 h-96 rounded-full pointer-events-none"
-       style="background:#FCAF45;opacity:.12;filter:blur(80px);"></div>
-  <div class="absolute top-1/3 -right-10 w-64 h-64 rounded-full pointer-events-none"
-       style="background:#E1306C;opacity:.10;filter:blur(70px);"></div>
-  <div class="absolute -bottom-16 -left-20 w-80 h-80 rounded-full pointer-events-none"
-       style="background:#833AB4;opacity:.14;filter:blur(80px);"></div>
+  <!-- 暗オーバーレイ -->
+  <div class="absolute inset-0" style="background:rgba(0,0,0,0.58);"></div>
 
   <div class="relative max-w-2xl mx-auto">
 
     <div class="rv mb-8">
-      <span class="inline-block text-xs font-bold tracking-widest px-4 py-2"
-            style="background:var(--ig);color:white;">
+      <span class="inline-block text-xs font-bold tracking-widest px-4 py-2 text-white"
+            style="border:1px solid rgba(255,255,255,.4);">
         カネサ藤原屋 お取引先様 限定プランのご案内
       </span>
     </div>
 
     <h1 class="rv d1 font-black leading-snug mb-4 text-white"
-        style="font-size:clamp(1.75rem,5vw,2.25rem);">
+        style="font-size:clamp(1.75rem,5vw,2rem);">
       味には自信があるのに、<br>客席が埋まらない。
     </h1>
 
-    <p class="rv d2 font-black leading-snug mb-8 ig-text"
-       style="font-size:clamp(1.45rem,4vw,1.85rem);">
+    <p class="rv d2 font-black leading-snug mb-8"
+       style="font-size:clamp(1.4rem,4vw,1.75rem);color:var(--accent);">
       その悩み、そろそろ<br>終わりにしませんか？
     </p>
 
-    <p class="rv d3 leading-loose mb-10" style="font-size:1rem;color:#aaaaaa;">
+    <p class="rv d3 leading-loose mb-10" style="font-size:1rem;color:rgba(255,255,255,.75);">
       Instagram・Googleマップの集客を、撮影も投稿も全部こちらで引き受けます。
     </p>
 
-    <p class="rv d4 text-sm leading-loose" style="color:#666666;border-left:2px solid #333;padding-left:1rem;">
+    <p class="rv d4 text-sm leading-loose"
+       style="color:rgba(255,255,255,.45);border-left:2px solid rgba(255,255,255,.2);padding-left:1rem;">
       詳しくはこのページで。気になったら、いつもの担当者に一声かけてください。
     </p>
 
@@ -109,14 +96,15 @@
 
 
 <!-- ════════════════════════════════════
-  PROBLEM（明るい背景）
+  PROBLEM（白背景）
 ════════════════════════════════════ -->
-<section class="section-light py-24 px-6">
+<section style="background:var(--bg-white);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-14">
-      <p class="ig-text text-xs font-bold tracking-widest mb-4">お悩み</p>
-      <h2 class="font-black leading-snug mb-4" style="font-size:clamp(1.5rem,4vw,1.9rem);color:var(--text-main);">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">お悩み</p>
+      <h2 class="font-black leading-snug mb-4"
+          style="font-size:clamp(1.375rem,3.5vw,1.625rem);color:var(--text-main);">
         腕には自信がある。でも、<br>新しいお客さんが来てくれない。
       </h2>
       <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
@@ -127,24 +115,24 @@
 
     <div class="flex flex-col gap-6">
 
-      <div class="rv d1 p-7" style="border-left:3px solid var(--ig-solid);background:var(--bg-card);">
-        <p class="ig-text font-black mb-2" style="font-size:.75rem;letter-spacing:.15em;">01</p>
+      <div class="rv d1 p-7" style="border-left:3px solid var(--accent);background:var(--bg-gray);">
+        <p class="accent-text font-black mb-2" style="font-size:.75rem;letter-spacing:.15em;">01</p>
         <h3 class="font-bold mb-2" style="font-size:1.125rem;color:var(--text-main);">Googleマップで上位に出てこない</h3>
         <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
           「近くの居酒屋」で検索されても、競合の下に埋もれたまま。見つけてもらえないまま、素通りされているかもしれません。
         </p>
       </div>
 
-      <div class="rv d2 p-7" style="border-left:3px solid var(--ig-solid);background:var(--bg-card);">
-        <p class="ig-text font-black mb-2" style="font-size:.75rem;letter-spacing:.15em;">02</p>
+      <div class="rv d2 p-7" style="border-left:3px solid var(--accent);background:var(--bg-gray);">
+        <p class="accent-text font-black mb-2" style="font-size:.75rem;letter-spacing:.15em;">02</p>
         <h3 class="font-bold mb-2" style="font-size:1.125rem;color:var(--text-main);">Instagramに投稿しても新規客につながらない</h3>
         <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
           料理を撮って投稿するだけでは、フォロワー以外の人には届きません。新規客に届けるには、仕組みが要ります。
         </p>
       </div>
 
-      <div class="rv d3 p-7" style="border-left:3px solid var(--ig-solid);background:var(--bg-card);">
-        <p class="ig-text font-black mb-2" style="font-size:.75rem;letter-spacing:.15em;">03</p>
+      <div class="rv d3 p-7" style="border-left:3px solid var(--accent);background:var(--bg-gray);">
+        <p class="accent-text font-black mb-2" style="font-size:.75rem;letter-spacing:.15em;">03</p>
         <h3 class="font-bold mb-2" style="font-size:1.125rem;color:var(--text-main);">忙しくて手が回らない</h3>
         <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
           毎日の仕込み・営業・接客で精一杯。SNS運用のための時間も、ノウハウも、人手もない。
@@ -157,27 +145,27 @@
 
 
 <!-- ════════════════════════════════════
-  TRUTH（暗背景に変更→場面転換）
+  TRUTH（薄グレー背景）
 ════════════════════════════════════ -->
-<section class="section-dark py-24 px-6">
+<section style="background:var(--bg-gray);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv">
-      <p class="leading-loose mb-8" style="font-size:.9375rem;color:#888888;">
-        お客さんがお店を探す方法は、この数年で大きく変わりました。「歩いて探す」「人に聞く」から、<strong style="color:#cccccc;">「スマホの地図で探す」が当たり前</strong>になっています。
+      <p class="leading-loose mb-8" style="font-size:.9375rem;color:var(--text-sub);">
+        お客さんがお店を探す方法は、この数年で大きく変わりました。「歩いて探す」「人に聞く」から、<strong style="color:var(--text-main);">「スマホの地図で探す」が当たり前</strong>になっています。
       </p>
 
-      <div class="mb-8 py-8 px-6" style="border-left:4px solid var(--ig-solid);">
-        <p class="font-black leading-snug text-white" style="font-size:clamp(1.3rem,4vw,1.65rem);">
+      <div class="mb-8 py-8 px-6" style="border-left:4px solid var(--accent);background:var(--bg-white);">
+        <p class="font-black leading-snug" style="font-size:clamp(1.3rem,4vw,1.625rem);color:var(--text-main);">
           どれだけ料理が美味しくても、<br>
-          <span class="ig-text">スマホの地図に出てこなければ、</span><br>
+          <span class="accent-text">スマホの地図に出てこなければ、</span><br>
           そもそも候補に入りません。
         </p>
       </div>
 
-      <p class="leading-loose" style="font-size:.9375rem;color:#888888;">
+      <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
         味で負けていないなら、あとは知ってもらう仕組みを整えるだけです。<br>
-        それをお手伝いするのが、<strong style="color:#cccccc;">繁盛SNS</strong>です。
+        それをお手伝いするのが、<strong style="color:var(--text-main);">繁盛SNS</strong>です。
       </p>
     </div>
 
@@ -186,14 +174,15 @@
 
 
 <!-- ════════════════════════════════════
-  WHY（明るい背景 ＋ 透かし大数字）
+  WHY（白背景 ＋ 透かし大数字）
 ════════════════════════════════════ -->
-<section class="section-light py-24 px-6">
+<section style="background:var(--bg-white);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-14">
-      <p class="ig-text text-xs font-bold tracking-widest mb-4">選ばれる理由</p>
-      <h2 class="font-black leading-snug mb-4" style="font-size:clamp(1.5rem,4vw,1.9rem);color:var(--text-main);">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">選ばれる理由</p>
+      <h2 class="font-black leading-snug mb-4"
+          style="font-size:clamp(1.375rem,3.5vw,1.625rem);color:var(--text-main);">
         東北で、ここまでできる理由
       </h2>
       <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
@@ -204,10 +193,9 @@
     <div class="flex flex-col gap-8">
 
       <div class="rv d1 flex gap-5 items-start relative overflow-hidden">
-        <!-- 透かし数字 -->
         <div class="absolute right-0 top-0 font-black leading-none select-none pointer-events-none"
              style="font-size:6rem;color:var(--text-main);opacity:.04;">01</div>
-        <div class="ig-bg flex-shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm text-white rounded-full">1</div>
+        <div class="accent-bg flex-shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm text-white rounded-full">1</div>
         <div class="relative">
           <h3 class="font-bold mb-2" style="font-size:1.0625rem;color:var(--text-main);">撮影・編集・投稿を一つのチームで完結</h3>
           <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">工程ごとにバラバラに外注する必要がないため、コストを大幅に抑えてまるごと提供できます。</p>
@@ -217,7 +205,7 @@
       <div class="rv d2 flex gap-5 items-start relative overflow-hidden">
         <div class="absolute right-0 top-0 font-black leading-none select-none pointer-events-none"
              style="font-size:6rem;color:var(--text-main);opacity:.04;">02</div>
-        <div class="ig-bg flex-shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm text-white rounded-full">2</div>
+        <div class="accent-bg flex-shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm text-white rounded-full">2</div>
         <div class="relative">
           <h3 class="font-bold mb-2" style="font-size:1.0625rem;color:var(--text-main);">「来店」だけを目的にした運用設計</h3>
           <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">フォロワー数や検索順位ではなく、お客さんが来ること。すべての施策を「来店」という一点に絞り込んでいます。</p>
@@ -227,7 +215,7 @@
       <div class="rv d3 flex gap-5 items-start relative overflow-hidden">
         <div class="absolute right-0 top-0 font-black leading-none select-none pointer-events-none"
              style="font-size:6rem;color:var(--text-main);opacity:.04;">03</div>
-        <div class="ig-bg flex-shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm text-white rounded-full">3</div>
+        <div class="accent-bg flex-shrink-0 w-8 h-8 flex items-center justify-center font-black text-sm text-white rounded-full">3</div>
         <div class="relative">
           <h3 class="font-bold mb-2" style="font-size:1.0625rem;color:var(--text-main);">東北エリアに特化している</h3>
           <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">東北の食文化・季節感・地域性を理解した上でコンテンツを設計します。全国一律のテンプレートとは違う、地元に刺さる発信ができます。</p>
@@ -240,14 +228,15 @@
 
 
 <!-- ════════════════════════════════════
-  SERVICE（カード背景）
+  SERVICE（薄グレー背景）
 ════════════════════════════════════ -->
-<section class="section-card py-24 px-6">
+<section style="background:var(--bg-gray);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-14">
-      <p class="ig-text text-xs font-bold tracking-widest mb-4">サービス内容</p>
-      <h2 class="font-black leading-snug mb-4" style="font-size:clamp(1.5rem,4vw,1.9rem);color:var(--text-main);">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">サービス内容</p>
+      <h2 class="font-black leading-snug mb-4"
+          style="font-size:clamp(1.375rem,3.5vw,1.625rem);color:var(--text-main);">
         すべてお任せ、4つのサービス
       </h2>
       <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">
@@ -257,7 +246,7 @@
 
     <div class="flex flex-col gap-5">
 
-      <div class="rv d1 bg-white p-7" style="border-top:3px solid transparent;border-image:var(--ig) 1;">
+      <div class="rv d1 bg-white p-7" style="border-top:3px solid var(--accent);">
         <div class="flex items-center gap-4 mb-4">
           <span style="font-size:2rem;">📱</span>
           <h3 class="font-bold" style="font-size:1.125rem;color:var(--text-main);">Instagram運用</h3>
@@ -265,7 +254,7 @@
         <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">リール動画月4本・写真投稿月4本。お店を知らない人のスマホに届く投稿を作ります。</p>
       </div>
 
-      <div class="rv d2 bg-white p-7" style="border-top:3px solid transparent;border-image:var(--ig) 1;">
+      <div class="rv d2 bg-white p-7" style="border-top:3px solid var(--accent);">
         <div class="flex items-center gap-4 mb-4">
           <span style="font-size:2rem;">📍</span>
           <h3 class="font-bold" style="font-size:1.125rem;color:var(--text-main);">Googleマップ対策</h3>
@@ -273,7 +262,7 @@
         <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">「近くの居酒屋」で検索したときに、お店が上位に表示される状態を作ります。口コミへの返信も含めてお任せください。</p>
       </div>
 
-      <div class="rv d3 bg-white p-7" style="border-top:3px solid transparent;border-image:var(--ig) 1;">
+      <div class="rv d3 bg-white p-7" style="border-top:3px solid var(--accent);">
         <div class="flex items-center gap-4 mb-4">
           <span style="font-size:2rem;">📷</span>
           <h3 class="font-bold" style="font-size:1.125rem;color:var(--text-main);">撮影・素材制作</h3>
@@ -281,7 +270,7 @@
         <p class="leading-loose" style="font-size:.9375rem;color:var(--text-sub);">映えではなく、「行きたい」と思わせる。3ヶ月に1回、約2〜3時間。料理・店内・外観をまとめて撮影し、投稿素材を制作します。</p>
       </div>
 
-      <div class="rv d4 bg-white p-7" style="border-top:3px solid transparent;border-image:var(--ig) 1;">
+      <div class="rv d4 bg-white p-7" style="border-top:3px solid var(--accent);">
         <div class="flex items-center gap-4 mb-4">
           <span style="font-size:2rem;">📊</span>
           <h3 class="font-bold" style="font-size:1.125rem;color:var(--text-main);">毎月の成果報告</h3>
@@ -295,14 +284,15 @@
 
 
 <!-- ════════════════════════════════════
-  ROI（暗背景 ＋ 比較行）
+  ROI（ダーク背景）
 ════════════════════════════════════ -->
-<section class="section-dark py-24 px-6">
+<section style="background:var(--bg-dark);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-6">
       <p class="text-xs font-bold tracking-widest mb-6" style="color:#555555;">費用対効果</p>
-      <p class="font-black leading-none mb-3 ig-text" style="font-size:clamp(2.5rem,10vw,3rem);">
+      <p class="font-black leading-none mb-3 accent-text"
+         style="font-size:clamp(2.5rem,10vw,3rem);">
         1日約1,800円
       </p>
       <p class="font-bold text-white" style="font-size:1rem;">の投資。やめても、お店の資産として残ります。</p>
@@ -325,14 +315,15 @@
 
 
 <!-- ════════════════════════════════════
-  FLOW（明るい背景）
+  FLOW（白背景）
 ════════════════════════════════════ -->
-<section class="section-light py-24 px-6">
+<section style="background:var(--bg-white);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-14">
-      <p class="ig-text text-xs font-bold tracking-widest mb-4">はじめ方</p>
-      <h2 class="font-black leading-snug" style="font-size:clamp(1.5rem,4vw,1.9rem);color:var(--text-main);">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">はじめ方</p>
+      <h2 class="font-black leading-snug"
+          style="font-size:clamp(1.375rem,3.5vw,1.625rem);color:var(--text-main);">
         はじめるまでの3ステップ
       </h2>
     </div>
@@ -341,8 +332,8 @@
 
       <div class="rv d1 flex gap-6 items-start pb-10">
         <div class="flex flex-col items-center flex-shrink-0">
-          <div class="ig-bg w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white">1</div>
-          <div class="mt-2" style="width:2px;height:3rem;background:var(--ig-solid);opacity:.2;"></div>
+          <div class="accent-bg w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white">1</div>
+          <div class="mt-2" style="width:2px;height:3rem;background:var(--accent);opacity:.2;"></div>
         </div>
         <div class="pt-1">
           <h3 class="font-bold mb-2" style="font-size:1.125rem;color:var(--text-main);">ご相談</h3>
@@ -352,8 +343,8 @@
 
       <div class="rv d2 flex gap-6 items-start pb-10">
         <div class="flex flex-col items-center flex-shrink-0">
-          <div class="ig-bg w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white">2</div>
-          <div class="mt-2" style="width:2px;height:3rem;background:var(--ig-solid);opacity:.2;"></div>
+          <div class="accent-bg w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white">2</div>
+          <div class="mt-2" style="width:2px;height:3rem;background:var(--accent);opacity:.2;"></div>
         </div>
         <div class="pt-1">
           <h3 class="font-bold mb-2" style="font-size:1.125rem;color:var(--text-main);">ご提案</h3>
@@ -363,7 +354,7 @@
 
       <div class="rv d3 flex gap-6 items-start">
         <div class="flex flex-col items-center flex-shrink-0">
-          <div class="ig-bg w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white">3</div>
+          <div class="accent-bg w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white">3</div>
         </div>
         <div class="pt-1">
           <h3 class="font-bold mb-2" style="font-size:1.125rem;color:var(--text-main);">運用スタート</h3>
@@ -377,23 +368,24 @@
 
 
 <!-- ════════════════════════════════════
-  PRICE（カード背景 ＋ 日割り表示）
+  PRICE（薄グレー背景）
 ════════════════════════════════════ -->
-<section class="section-card py-24 px-6">
+<section style="background:var(--bg-gray);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-10">
-      <p class="ig-text text-xs font-bold tracking-widest mb-6">料金</p>
+      <p class="accent-text text-xs font-bold tracking-widest mb-6">料金</p>
 
-      <!-- 日割り → 月額の順で表示 -->
       <p class="font-bold mb-1" style="font-size:.875rem;color:var(--text-sub);">1日あたり</p>
-      <p class="ig-text font-black leading-none mb-2" style="font-size:clamp(1.75rem,6vw,2.25rem);">約1,800円</p>
+      <p class="font-black leading-none mb-2 accent-text"
+         style="font-size:clamp(1.75rem,6vw,2.25rem);">約1,800円</p>
       <div class="flex items-center gap-3 mb-5">
         <div style="height:1px;background:#ccc;flex:1;"></div>
         <span style="font-size:.75rem;color:#aaa;">月額に換算すると</span>
         <div style="height:1px;background:#ccc;flex:1;"></div>
       </div>
-      <div class="font-black leading-none mb-2" style="font-size:clamp(2.75rem,10vw,3.5rem);color:var(--text-main);">
+      <div class="font-black leading-none mb-2"
+           style="font-size:clamp(2.25rem,8vw,2.5rem);color:var(--text-main);">
         ¥55,000<span class="font-semibold" style="font-size:.38em;color:var(--text-sub);">/月</span>
       </div>
       <p class="font-medium" style="font-size:.875rem;color:var(--text-sub);">（税込）／最低契約期間6ヶ月</p>
@@ -402,17 +394,20 @@
     <div class="rv bg-white p-7">
       <p class="font-bold text-xs tracking-widest mb-5" style="color:var(--text-sub);">含まれるサービス</p>
       <ul class="mb-6 flex flex-col gap-0">
-        <li class="flex items-center gap-3 py-3.5 text-sm" style="border-bottom:1px solid var(--bg-card);color:var(--text-main);">
-          <span class="ig-text font-black">✓</span>Instagram運用
+        <li class="flex items-center gap-3 py-3.5 text-sm"
+            style="border-bottom:1px solid var(--bg-gray);color:var(--text-main);">
+          <span class="accent-text font-black">✓</span>Instagram運用
         </li>
-        <li class="flex items-center gap-3 py-3.5 text-sm" style="border-bottom:1px solid var(--bg-card);color:var(--text-main);">
-          <span class="ig-text font-black">✓</span>Googleマップ対策
+        <li class="flex items-center gap-3 py-3.5 text-sm"
+            style="border-bottom:1px solid var(--bg-gray);color:var(--text-main);">
+          <span class="accent-text font-black">✓</span>Googleマップ対策
         </li>
-        <li class="flex items-center gap-3 py-3.5 text-sm" style="border-bottom:1px solid var(--bg-card);color:var(--text-main);">
-          <span class="ig-text font-black">✓</span>3ヶ月に1回の現地撮影込み
+        <li class="flex items-center gap-3 py-3.5 text-sm"
+            style="border-bottom:1px solid var(--bg-gray);color:var(--text-main);">
+          <span class="accent-text font-black">✓</span>3ヶ月に1回の現地撮影込み
         </li>
         <li class="flex items-center gap-3 py-3.5 text-sm" style="color:var(--text-main);">
-          <span class="ig-text font-black">✓</span>毎月の成果報告
+          <span class="accent-text font-black">✓</span>毎月の成果報告
         </li>
       </ul>
       <div class="leading-loose" style="font-size:.8125rem;color:var(--text-sub);">
@@ -426,15 +421,16 @@
 
 
 <!-- ════════════════════════════════════
-  FAQ（明るい背景）
+  FAQ（白背景）
 ════════════════════════════════════ -->
-<section class="section-light py-24 px-6">
+<section style="background:var(--bg-white);" class="py-24 px-6">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-14">
-      <p class="ig-text text-xs font-bold tracking-widest mb-4">よくあるご質問</p>
-      <h2 class="font-black leading-snug" style="font-size:clamp(1.5rem,4vw,1.9rem);color:var(--text-main);">
-        よくあるご質問
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">よくあるご質問</p>
+      <h2 class="font-black leading-snug"
+          style="font-size:clamp(1.375rem,3.5vw,1.625rem);color:var(--text-main);">
+        始める前に、よく聞かれること
       </h2>
     </div>
 
@@ -442,9 +438,9 @@
 
       <div class="faq-item bg-white border" style="border-color:#e5e0da;">
         <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
-          <span class="ig-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+          <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
           <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">SNSの知識がなくても大丈夫ですか？</span>
-          <span class="faq-icon ig-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
         </button>
         <div class="faq-body">
           <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">まったく問題ありません。企画・撮影・編集・投稿まですべてお任せください。オーナー様にお願いすることは、最初のご相談と3ヶ月に1回の撮影立ち会いのみです。</p>
@@ -453,9 +449,9 @@
 
       <div class="faq-item bg-white border" style="border-color:#e5e0da;">
         <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
-          <span class="ig-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+          <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
           <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">効果が出るまでどのくらいかかりますか？</span>
-          <span class="faq-icon ig-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
         </button>
         <div class="faq-body">
           <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">Googleマップの対策は、一般的に3〜6ヶ月で検索表示回数に変化が出ると言われています。Instagramは3ヶ月目以降が目安です。常連客が積み上がるには6ヶ月〜1年のスパンをお見込みください。</p>
@@ -464,9 +460,9 @@
 
       <div class="faq-item bg-white border" style="border-color:#e5e0da;">
         <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
-          <span class="ig-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+          <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
           <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">撮影はどのように行いますか？</span>
-          <span class="faq-icon ig-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
         </button>
         <div class="faq-body">
           <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">3ヶ月に1回、約2〜3時間をまとめて実施。料理・構成は事前打ち合わせで決定し、公開前にオーナー様にご確認いただきます。</p>
@@ -475,9 +471,9 @@
 
       <div class="faq-item bg-white border" style="border-color:#e5e0da;">
         <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
-          <span class="ig-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+          <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
           <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">契約期間と解約について教えてください。</span>
-          <span class="faq-icon ig-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
         </button>
         <div class="faq-body">
           <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">最低6ヶ月、以降は自動更新。解約は1ヶ月前のお申し出で可能。詳しくは料金欄をご覧ください。</p>
@@ -486,9 +482,9 @@
 
       <div class="faq-item bg-white border" style="border-color:#e5e0da;">
         <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
-          <span class="ig-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+          <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
           <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">グルメサイト（ぐるなび・食べログ等）と併用できますか？</span>
-          <span class="faq-icon ig-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
         </button>
         <div class="faq-body">
           <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">もちろん可能です。グルメサイトを続けながら、GoogleマップとInstagramを新たな集客チャネルとして追加する形になります。</p>
@@ -501,13 +497,12 @@
 
 
 <!-- ════════════════════════════════════
-  CTA（暗背景 ＋ グロー ＋ 吹き出し強調）
+  CTA（ダーク背景）
 ════════════════════════════════════ -->
-<section class="section-dark py-28 px-6 text-center relative overflow-hidden">
+<section style="background:var(--bg-dark);" class="py-28 px-6 text-center relative overflow-hidden">
 
-  <!-- 中央グロー -->
   <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-    <div style="width:500px;height:300px;background:var(--ig);opacity:.07;filter:blur(80px);border-radius:50%;"></div>
+    <div style="width:500px;height:300px;background:var(--accent);opacity:.06;filter:blur(80px);border-radius:50%;"></div>
   </div>
 
   <div class="relative max-w-2xl mx-auto">
@@ -517,10 +512,9 @@
         気になったら、いつもの担当者に
       </p>
 
-      <!-- 「SNSの件」を吹き出し風に強調 -->
-      <div class="inline-block mb-12 relative">
-        <p class="font-black leading-relaxed ig-text"
-           style="font-size:clamp(1.5rem,5vw,2.25rem);padding:.5rem 1.5rem;border:2px solid transparent;border-image:var(--ig) 1;">
+      <div class="inline-block mb-12">
+        <p class="font-black leading-relaxed accent-text"
+           style="font-size:clamp(1.5rem,5vw,2.25rem);padding:.5rem 1.5rem;border:2px solid var(--accent);">
           「SNSの件」と一声かけてください。
         </p>
       </div>
@@ -534,11 +528,13 @@
 
 
 <!-- ════════════════════════════════════
-  FOOTER
+  FOOTER（白背景）
 ════════════════════════════════════ -->
-<footer class="py-8 text-center" style="background:#111111;border-top:1px solid #222;">
-  <div class="font-black tracking-widest mb-2" style="color:#444444;">繁盛<span class="ig-text">SNS</span></div>
-  <div class="text-xs" style="color:#333333;">© 2025 繁盛SNS</div>
+<footer style="background:var(--bg-white);border-top:1px solid #e5e0da;" class="py-8 text-center">
+  <div class="font-black tracking-widest mb-2" style="color:var(--text-main);">
+    繁盛<span class="accent-text">SNS</span>
+  </div>
+  <div class="text-xs" style="color:var(--text-sub);">© 2026 繁盛SNS - カネサ藤原屋SNS集客支援サービス</div>
 </footer>
 
 
