@@ -45,6 +45,30 @@
 
     @media(max-width:767px){
       .service-img{max-height:200px!important;}
+      .hero-tag{font-size:.8rem!important;padding:6px 12px!important;}
+      .hero-text{padding:1.25rem!important;}
+      .hero-mockup{height:min(380px,65vw)!important;}
+      .hero-phone-left{width:150px!important;}
+      .hero-phone-right{width:160px!important;}
+      .flow-circle{width:70px!important;height:70px!important;}
+      .flow-circle svg{width:30px!important;height:30px!important;}
+      .flow-title{font-size:.9rem!important;}
+      .flow-desc{font-size:.75rem!important;}
+      .problem-sub{font-size:.8rem!important;}
+      .flow-step{font-size:.65rem!important;}
+      .flow-step-num{font-size:1.1rem!important;}
+      .roi-card{width:220px!important;}
+      .roi-card .text-center{padding:1.25rem!important;}
+      .roi-card .accent-text{font-size:1.75rem!important;}
+      .roi-card .rounded-full{width:48px!important;height:48px!important;}
+      .roi-graph-inner{padding:1.25rem!important;}
+      .roi-graph-title{font-size:1rem!important;}
+      .roi-graph-sub{font-size:.75rem!important;}
+      .section-pad{padding-top:3.5rem!important;padding-bottom:3.5rem!important;}
+      .truth-heading{font-size:1.25rem!important;}
+      .price-amount{font-size:2.5rem!important;}
+      .faq-question{font-size:.85rem!important;}
+      .cta-heading{font-size:1.1rem!important;}
     }
     @media(min-width:768px){
       .roi-card{width:auto!important;flex-shrink:1!important;}
@@ -83,12 +107,12 @@
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16" style="position:relative;z-index:1;">
 
     <!-- 左：テキスト (60%) -->
-    <div class="rv flex-1 md:max-w-[58%] px-8 py-8"
+    <div class="rv flex-1 md:max-w-[58%] px-8 py-8 hero-text"
          style="background:rgba(0,0,0,.82);border-radius:16px;backdrop-filter:blur(4px);">
 
       <!-- タグ -->
       <div class="mb-8">
-        <span class="inline-block font-bold tracking-widest px-4 py-2"
+        <span class="hero-tag inline-block font-bold tracking-widest px-4 py-2"
               style="font-size:1rem;color:#fff;background:var(--ig-gradient);border-radius:6px;">
           カネサ藤原屋 お取引先様 限定プランのご案内
         </span>
@@ -115,7 +139,7 @@
 
     <!-- 右：iPhone 16風 スマホ2台モックアップ（扇形配置） -->
     <div class="rv d1 w-full md:w-[42%] flex-shrink-0 flex justify-center items-center">
-      <div style="position:relative;width:min(360px,85vw);height:min(520px,70vw);">
+      <div class="hero-mockup" style="position:relative;width:min(360px,85vw);height:min(520px,70vw);">
 
         <!-- 左スマホ（背面・反時計回り12度・左下） -->
         <div style="position:absolute;bottom:10px;left:0;z-index:1;transform:perspective(600px) rotate(-12deg) rotateY(0deg);transform-origin:bottom center;transition:transform .3s ease;" onmouseenter="this.style.transform='perspective(600px) rotate(-12deg) rotateY(-15deg)'" onmouseleave="this.style.transform='perspective(600px) rotate(-12deg) rotateY(0deg)'">
@@ -126,7 +150,7 @@
           <!-- サイドボタン（右：電源） -->
           <div style="position:absolute;right:-3px;top:80px;width:3px;height:38px;background:#2a2a2a;border-radius:0 2px 2px 0;"></div>
           <!-- 本体 -->
-          <div style="width:195px;background:#1a1a1a;border-radius:40px;padding:10px;box-shadow:0 0 0 1px #3a3a3a, 0 0 0 2px #222, 0 20px 60px rgba(0,0,0,.7);">
+          <div class="hero-phone-left" style="width:195px;background:#1a1a1a;border-radius:40px;padding:10px;box-shadow:0 0 0 1px #3a3a3a, 0 0 0 2px #222, 0 20px 60px rgba(0,0,0,.7);">
             <!-- 画面 -->
             <div style="border-radius:30px;overflow:hidden;background:#fff;position:relative;">
               <!-- Dynamic Island -->
@@ -173,7 +197,7 @@
           <!-- サイドボタン（右：電源） -->
           <div style="position:absolute;right:-3px;top:80px;width:3px;height:38px;background:#2a2a2a;border-radius:0 2px 2px 0;"></div>
           <!-- 本体 -->
-          <div style="width:205px;background:#1a1a1a;border-radius:40px;padding:10px;box-shadow:0 0 0 1px #3a3a3a, 0 0 0 2px #222, 0 24px 64px rgba(0,0,0,.75);">
+          <div class="hero-phone-right" style="width:205px;background:#1a1a1a;border-radius:40px;padding:10px;box-shadow:0 0 0 1px #3a3a3a, 0 0 0 2px #222, 0 24px 64px rgba(0,0,0,.75);">
             <!-- 画面 -->
             <div style="border-radius:30px;overflow:hidden;background:#fff;position:relative;">
               <!-- Dynamic Island -->
@@ -221,7 +245,7 @@
 <!-- ════════════════════════════════════
   PROBLEM（薄Instagramグラデーション背景）
 ════════════════════════════════════ -->
-<section style="background:linear-gradient(135deg, rgba(240,148,51,.07), rgba(230,104,60,.07), rgba(220,39,67,.07), rgba(204,35,102,.07), rgba(188,24,136,.07));" class="py-24 px-6">
+<section style="background:linear-gradient(135deg, rgba(240,148,51,.07), rgba(230,104,60,.07), rgba(220,39,67,.07), rgba(204,35,102,.07), rgba(188,24,136,.07));" class="py-24 px-6 section-pad">
   <div class="max-w-4xl mx-auto">
 
     <div class="rv mb-14 text-center">
@@ -230,7 +254,7 @@
           style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
         なぜ、いい店なのに<br>お客さんが来ないのか？
       </h2>
-      <p class="leading-loose mx-auto" style="font-size:.9375rem;color:var(--text-sub);max-width:36em;">
+      <p class="leading-loose mx-auto problem-sub" style="font-size:.9375rem;color:var(--text-sub);max-width:36em;">
         仕込みと営業で一日が終わる。SNSやネット集客まで手が回らない。<br>
         そんなオーナー様に共通する悩みがあります。
       </p>
@@ -291,12 +315,12 @@
 <!-- ════════════════════════════════════
   TRUTH（薄ウォームグレー・和の質感）
 ════════════════════════════════════ -->
-<section style="background:#ffffff;" class="py-24 px-6">
+<section style="background:#ffffff;" class="py-24 px-6 section-pad">
   <div class="max-w-2xl mx-auto text-center">
 
     <!-- 残酷な事実 -->
     <div class="rv mb-14">
-      <p class="font-black leading-relaxed"
+      <p class="font-black leading-relaxed truth-heading"
          style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--text-main);">
         どれだけ料理が美味しくても、<br>
         <span class="accent-text" style="display:inline;">スマホで見つからなければ、</span><br>
@@ -307,9 +331,7 @@
     <!-- 救いと提案 -->
     <div class="rv d1">
       <p class="leading-loose" style="font-size:1.25rem;color:#888;">
-        味で負けていないなら、<br>
-        あとは「<strong class="accent-text">知ってもらう仕組み</strong>」を整えるだけ。<br>
-        それをお手伝いするのが、<strong class="accent-text">繁盛SNS</strong>です。
+        味で負けていないなら、あとは「<strong class="accent-text">知ってもらう仕組み</strong>」を整えるだけ。それをお手伝いするのが、<strong class="accent-text">繁盛SNS</strong>です。
       </p>
     </div>
 
@@ -320,7 +342,7 @@
 <!-- ════════════════════════════════════
   WHY（Instagramグラデーション背景）
 ════════════════════════════════════ -->
-<section style="background:linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);" class="py-24 px-6">
+<section style="background:linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);" class="py-24 px-6 section-pad">
   <div class="max-w-4xl mx-auto">
 
     <div class="rv mb-14 text-center">
@@ -330,7 +352,7 @@
         繁盛SNSがおすすめな理由
       </h2>
       <p class="leading-loose mx-auto" style="font-size:.9375rem;color:rgba(255,255,255,.85);max-width:36em;">
-        繁盛SNSが選ばれている、3つの理由をご紹介します。
+        繁盛SNSが選ばれている、<br>3つの理由をご紹介します。
       </p>
     </div>
 
@@ -353,7 +375,7 @@
         <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
           <p class="font-black leading-none select-none mb-4 accent-text"
              style="font-size:2.75rem;letter-spacing:-.02em;">02</p>
-          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);"><span style="white-space:nowrap;">「来店」だけを目的にした</span>運用設計</h3>
+          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);"><span style="white-space:nowrap;">来店だけを目的にした</span>運用設計</h3>
           <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
             フォロワー数や検索順位ではなく、お客さんが来ること。すべての施策を「来店」に絞り込んでいます。
           </p>
@@ -380,7 +402,7 @@
 <!-- ════════════════════════════════════
   SERVICE（白背景・交互レイアウト）
 ════════════════════════════════════ -->
-<section style="background:var(--bg-white);" class="py-24 px-6">
+<section style="background:var(--bg-white);" class="py-24 px-6 section-pad">
   <div class="max-w-4xl mx-auto">
 
     <div class="rv mb-16 text-center">
@@ -485,7 +507,7 @@
 <!-- ════════════════════════════════════
   FLOW（薄Instagramグラデーション・横並び）
 ════════════════════════════════════ -->
-<section style="background:linear-gradient(135deg, rgba(240,148,51,.07), rgba(230,104,60,.07), rgba(220,39,67,.07), rgba(204,35,102,.07), rgba(188,24,136,.07));" class="py-24 px-6">
+<section style="background:linear-gradient(135deg, rgba(240,148,51,.07), rgba(230,104,60,.07), rgba(220,39,67,.07), rgba(204,35,102,.07), rgba(188,24,136,.07));" class="py-24 px-6 section-pad">
   <div class="max-w-4xl mx-auto">
 
     <div class="rv mb-6 text-center">
@@ -498,15 +520,15 @@
       <div class="mx-auto" style="width:40px;height:3px;background:var(--ig-gradient);border-radius:4px;"></div>
     </div>
 
-    <div class="rv grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-start mt-14">
+    <div class="rv grid grid-cols-3 gap-4 md:gap-8 text-center items-start mt-14">
 
       <!-- STEP 01 -->
       <div class="rv d1 flex flex-col items-center relative">
-        <p class="font-black tracking-widest mb-4" style="font-size:.8rem;">
-          <span style="color:var(--text-main);">STEP</span><span class="accent-text" style="font-size:1.5rem;margin-left:4px;">01</span>
+        <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
+          <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">01</span>
         </p>
         <div class="rounded-full flex items-center justify-center mb-6"
-             style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
+             class="flow-circle" style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
           <div class="w-full h-full rounded-full flex items-center justify-center" style="background:#fff;">
             <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <defs><linearGradient id="ig-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
@@ -518,19 +540,19 @@
         <div class="hidden md:block absolute right-0 top-20" style="opacity:.2;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-main)" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
         </div>
-        <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">ご相談</h3>
-        <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+        <h3 class="font-black mb-3 flow-title" style="font-size:1.125rem;color:var(--text-main);">ご相談</h3>
+        <p class="leading-loose flow-desc" style="font-size:.9rem;color:var(--text-sub);">
           まずはいつもの担当者に<br>お声がけください。
         </p>
       </div>
 
       <!-- STEP 02 -->
       <div class="rv d2 flex flex-col items-center relative">
-        <p class="font-black tracking-widest mb-4" style="font-size:.8rem;">
-          <span style="color:var(--text-main);">STEP</span><span class="accent-text" style="font-size:1.5rem;margin-left:4px;">02</span>
+        <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
+          <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">02</span>
         </p>
         <div class="rounded-full flex items-center justify-center mb-6"
-             style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
+             class="flow-circle" style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
           <div class="w-full h-full rounded-full flex items-center justify-center" style="background:#fff;">
             <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -543,19 +565,19 @@
         <div class="hidden md:block absolute right-0 top-20" style="opacity:.2;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-main)" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
         </div>
-        <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">ご提案</h3>
-        <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+        <h3 class="font-black mb-3 flow-title" style="font-size:1.125rem;color:var(--text-main);">ご提案</h3>
+        <p class="leading-loose flow-desc" style="font-size:.9rem;color:var(--text-sub);">
           お店に合った施策案をお持ちします。<br>納得いただけた場合のみ契約へ。
         </p>
       </div>
 
       <!-- STEP 03 -->
       <div class="rv d3 flex flex-col items-center">
-        <p class="font-black tracking-widest mb-4" style="font-size:.8rem;">
-          <span style="color:var(--text-main);">STEP</span><span class="accent-text" style="font-size:1.5rem;margin-left:4px;">03</span>
+        <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
+          <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">03</span>
         </p>
         <div class="rounded-full flex items-center justify-center mb-6"
-             style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
+             class="flow-circle" style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
           <div class="w-full h-full rounded-full flex items-center justify-center" style="background:#fff;">
             <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
@@ -563,8 +585,8 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">運用スタート</h3>
-        <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+        <h3 class="font-black mb-3 flow-title" style="font-size:1.125rem;color:var(--text-main);">運用スタート</h3>
+        <p class="leading-loose flow-desc" style="font-size:.9rem;color:var(--text-sub);">
           初回撮影・セットアップ後、<br>翌月から投稿を開始します。
         </p>
       </div>
@@ -577,7 +599,7 @@
 <!-- ════════════════════════════════════
   PRICE（薄グレー背景・中央カード）
 ════════════════════════════════════ -->
-<section style="background:var(--bg-gray);" class="py-24 px-6">
+<section style="background:var(--bg-gray);" class="py-24 px-6 section-pad">
   <div class="max-w-4xl mx-auto">
 
     <div class="rv mb-14 text-center">
@@ -595,7 +617,7 @@
       <!-- ヘッダー（グラデーション） -->
       <div class="text-center py-8 px-6" style="background:var(--ig-gradient);">
         <p class="font-bold text-white mb-1" style="font-size:.875rem;opacity:.85;">月額</p>
-        <p class="font-black text-white leading-none"
+        <p class="font-black text-white leading-none price-amount"
            style="font-size:clamp(2.5rem,8vw,3.5rem);">
           ¥55,000<span style="font-size:.35em;font-weight:500;opacity:.65;">（税込）</span>
         </p>
@@ -691,14 +713,14 @@
 <!-- ════════════════════════════════════
   ROI（薄ウォーム系グラデーション背景）
 ════════════════════════════════════ -->
-<section style="background:linear-gradient(180deg, rgba(188,24,136,.05), rgba(204,35,102,.06), rgba(230,104,60,.08), rgba(240,148,51,.05));" class="py-24 px-6">
+<section style="background:linear-gradient(180deg, rgba(188,24,136,.05), rgba(204,35,102,.06), rgba(230,104,60,.08), rgba(240,148,51,.05));" class="py-24 px-6 section-pad">
   <div class="max-w-4xl mx-auto">
 
     <!-- 見出し -->
     <div class="rv mb-14 text-center">
       <p class="accent-text text-xs font-bold tracking-widest mb-4">費用対効果</p>
       <h2 class="font-black leading-snug mb-4"
-          style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
+          style="font-size:clamp(1.25rem,3.5vw,2rem);color:var(--text-main);">
         続けるほど、<span class="accent-text">利益は積み上がる。</span>
       </h2>
       <p class="leading-loose mx-auto" style="font-size:.9375rem;color:var(--text-sub);max-width:32em;">
@@ -759,9 +781,9 @@
 
     <!-- 累計リターン線グラフ -->
     <div class="rv" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
-      <div style="background:#fff;border-radius:19px;padding:2.5rem;">
-        <p class="font-black tracking-widest mb-2" style="font-size:1.25rem;color:var(--text-main);">5年間で増える売上のイメージ</p>
-        <p class="mb-6" style="font-size:.875rem;color:var(--text-sub);">かかる費用 約60万円 → 増える売上 約220万円（約3.6倍）</p>
+      <div class="roi-graph-inner" style="background:#fff;border-radius:19px;padding:2.5rem;">
+        <p class="font-black tracking-widest mb-2 roi-graph-title" style="font-size:1.25rem;color:var(--text-main);">5年間で増える売上のイメージ</p>
+        <p class="mb-6 roi-graph-sub" style="font-size:.875rem;color:var(--text-sub);">かかる費用 約60万円 → 増える売上 約220万円（約3.6倍）</p>
 
         <!-- SVG線グラフ -->
         <!-- データ: 開始=0, 1年=-26万, 2年=+18万, 3年=+74万, 4年=+142万, 5年=+220万 -->
@@ -872,7 +894,7 @@
 <!-- ════════════════════════════════════
   FAQ（白背景）
 ════════════════════════════════════ -->
-<section style="background:var(--bg-white);" class="py-24 px-6">
+<section style="background:var(--bg-white);" class="py-24 px-6 section-pad">
   <div class="max-w-2xl mx-auto">
 
     <div class="rv mb-14">
@@ -889,7 +911,7 @@
         <div style="background:#fff;border-radius:12px;">
           <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
             <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
-            <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">SNSの知識がなくても大丈夫ですか？</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">SNSの知識がなくても大丈夫ですか？</span>
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
@@ -902,7 +924,7 @@
         <div style="background:#fff;border-radius:12px;">
           <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
             <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
-            <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">効果が出るまでどのくらいかかりますか？</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">効果が出るまでどのくらいかかりますか？</span>
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
@@ -915,7 +937,7 @@
         <div style="background:#fff;border-radius:12px;">
           <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
             <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
-            <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">撮影はどのように行いますか？</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">撮影はどのように行いますか？</span>
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
@@ -928,7 +950,7 @@
         <div style="background:#fff;border-radius:12px;">
           <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
             <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
-            <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">契約期間と解約について教えてください。</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">契約期間と解約について教えてください。</span>
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
@@ -941,7 +963,7 @@
         <div style="background:#fff;border-radius:12px;">
           <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
             <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
-            <span class="font-bold flex-1 leading-snug" style="font-size:.9375rem;color:var(--text-main);">グルメサイト（ぐるなび・食べログ等）と併用できますか？</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">グルメサイト（ぐるなび・食べログ等）と併用できますか？</span>
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
@@ -962,7 +984,7 @@
 
   <div class="relative max-w-2xl mx-auto">
     <div class="rv">
-      <p class="font-bold leading-relaxed mb-5"
+      <p class="font-bold leading-relaxed mb-5 cta-heading"
          style="font-size:clamp(1.25rem,4vw,1.65rem);color:var(--text-main);">
         気になったら、いつもの担当者に
       </p>
@@ -970,8 +992,8 @@
       <div class="cta-btn inline-block mb-8"
            style="background:linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);border-radius:12px;padding:.75rem 2rem;box-shadow:0 8px 32px rgba(0,0,0,.15);cursor:pointer;transition:opacity .3s ease;">
         <p class="font-black leading-snug text-white"
-           style="font-size:clamp(1.25rem,4vw,1.75rem);">
-          「SNSの件」とお声がけください。
+           style="font-size:clamp(1rem,3.5vw,1.75rem);">
+          「SNSの件」と<br class="md:hidden">お声がけください。
         </p>
       </div>
 
