@@ -43,6 +43,9 @@
     .roi-label { opacity: 0; }
     .roi-label.on { opacity: 1; transition: opacity .3s ease; }
 
+    @media(max-width:767px){
+      .service-img{max-height:200px!important;}
+    }
     @media(min-width:768px){
       .roi-card{width:auto!important;flex-shrink:1!important;}
     }
@@ -75,7 +78,7 @@
   HERO（2カラム・クリーン背景）
 ════════════════════════════════════ -->
 <section class="relative px-6 overflow-visible"
-         style="background:url('hero-bg.jpg') center/cover no-repeat;padding-top:5rem;padding-bottom:5rem;">
+         style="background:#1a1a1a url('hero-bg.jpg') center/cover no-repeat;padding-top:5rem;padding-bottom:5rem;">
 
   <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16" style="position:relative;z-index:1;">
 
@@ -98,27 +101,21 @@
       </h1>
 
       <!-- サブコピー -->
-      <p class="font-black leading-snug mb-8"
-         style="font-size:clamp(1.5rem,4vw,2rem);color:var(--accent);">
+      <p class="font-black leading-snug mb-8 accent-text"
+         style="font-size:clamp(1.5rem,4vw,2rem);">
         その悩み、そろそろ<br>終わりにしませんか？
       </p>
 
       <!-- 説明文 -->
       <p class="leading-loose mb-8" style="font-size:1rem;color:#aaaaaa;">
-        Instagram・Googleマップの集客を、撮影も投稿も全部こちらで引き受けます。
-      </p>
-
-      <!-- CTA誘導 -->
-      <p class="text-sm leading-loose"
-         style="color:#999999;border-left:2px solid #444;padding-left:1rem;">
-        詳しくはこのページで。気になったら、いつもの担当者に一声かけてください。
+        Instagram・Googleマップの集客、撮影から投稿まで全部お任せください。
       </p>
 
     </div>
 
     <!-- 右：iPhone 16風 スマホ2台モックアップ（扇形配置） -->
     <div class="rv d1 w-full md:w-[42%] flex-shrink-0 flex justify-center items-center">
-      <div style="position:relative;width:360px;height:520px;">
+      <div style="position:relative;width:min(360px,85vw);height:min(520px,70vw);">
 
         <!-- 左スマホ（背面・反時計回り12度・左下） -->
         <div style="position:absolute;bottom:10px;left:0;z-index:1;transform:perspective(600px) rotate(-12deg) rotateY(0deg);transform-origin:bottom center;transition:transform .3s ease;" onmouseenter="this.style.transform='perspective(600px) rotate(-12deg) rotateY(-15deg)'" onmouseleave="this.style.transform='perspective(600px) rotate(-12deg) rotateY(0deg)'">
@@ -231,11 +228,11 @@
       <p class="accent-text text-xs font-bold tracking-widest mb-4">お悩み</p>
       <h2 class="font-black leading-snug mb-6"
           style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
-        腕には自信がある。<br>でも、新しいお客さんが来てくれない。
+        なぜ、いい店なのに<br>お客さんが来ないのか？
       </h2>
       <p class="leading-loose mx-auto" style="font-size:.9375rem;color:var(--text-sub);max-width:36em;">
-        仕込みと営業で一日が終わる。SNSやネット集客に手が回らない。<br>
-        お取引先のオーナー様からも、そんなお声をよくいただきます。
+        仕込みと営業で一日が終わる。SNSやネット集客まで手が回らない。<br>
+        そんなオーナー様に共通する悩みがあります。
       </p>
     </div>
 
@@ -243,25 +240,25 @@
 
       <!-- 01カード -->
       <div class="rv d1 flex flex-col transition-all duration-300 hover:-translate-y-2"
-           style="background:#ffffff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);border-left:5px solid #e6683c;">
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-black leading-none select-none mb-5"
-             style="font-size:2.75rem;color:#e6683c;letter-spacing:-.02em;">01</p>
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.1);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-5 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">01</p>
           <h3 class="font-black mb-4" style="font-size:1.125rem;color:var(--text-main);">
             Googleマップで<br>上位に出てこない
           </h3>
           <p class="leading-loose mt-auto" style="font-size:.9rem;color:var(--text-sub);">
-            「近くの居酒屋」で検索されても、競合の下に埋もれたまま。見つけてもらえないまま、素通りされているかもしれません。
+            Googleマップで検索されても、他のお店の下に埋もれたまま。見つけてもらえないまま、素通りされているかもしれません。
           </p>
         </div>
       </div>
 
       <!-- 02カード -->
       <div class="rv d2 flex flex-col transition-all duration-300 hover:-translate-y-2"
-           style="background:#ffffff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);border-left:5px solid #e6683c;">
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-black leading-none select-none mb-5"
-             style="font-size:2.75rem;color:#e6683c;letter-spacing:-.02em;">02</p>
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.1);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-5 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">02</p>
           <h3 class="font-black mb-4" style="font-size:1.0625rem;color:var(--text-main);word-break:keep-all;overflow-wrap:break-word;">
             Instagramに投稿しても新規客につながらない
           </h3>
@@ -273,10 +270,10 @@
 
       <!-- 03カード -->
       <div class="rv d3 flex flex-col transition-all duration-300 hover:-translate-y-2"
-           style="background:#ffffff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);border-left:5px solid #e6683c;">
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-black leading-none select-none mb-5"
-             style="font-size:2.75rem;color:#e6683c;letter-spacing:-.02em;">03</p>
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.1);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-5 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">03</p>
           <h3 class="font-black mb-4" style="font-size:1.125rem;color:var(--text-main);">
             忙しくて<br>手が回らない
           </h3>
@@ -294,33 +291,24 @@
 <!-- ════════════════════════════════════
   TRUTH（薄ウォームグレー・和の質感）
 ════════════════════════════════════ -->
-<section style="background:#ffffff;" class="py-32 px-6">
+<section style="background:#ffffff;" class="py-24 px-6">
   <div class="max-w-2xl mx-auto text-center">
 
-    <!-- ブロック1：現状の提示 -->
-    <div class="rv mb-20">
-      <p class="leading-loose" style="font-size:1.25rem;color:#777;">
-        お客さんがお店を探す方法は、この数年で大きく変わりました。<br>
-        「歩いて探す」「人に聞く」から、<br>
-        <strong class="accent-text">「スマホの地図で探す」が当たり前</strong>になっています。
-      </p>
-    </div>
-
-    <!-- ブロック2：残酷な事実（最大強調） -->
-    <div class="rv d1 mb-20">
+    <!-- 残酷な事実 -->
+    <div class="rv mb-14">
       <p class="font-black leading-relaxed"
          style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--text-main);">
         どれだけ料理が美味しくても、<br>
-        <span class="accent-text" style="display:inline;">スマホの地図に出てこなければ、</span><br>
+        <span class="accent-text" style="display:inline;">スマホで見つからなければ、</span><br>
         そもそも候補に入りません。
       </p>
     </div>
 
-    <!-- ブロック3：救いと提案 -->
-    <div class="rv d2">
-      <p class="leading-loose" style="font-size:1.375rem;color:#888;">
+    <!-- 救いと提案 -->
+    <div class="rv d1">
+      <p class="leading-loose" style="font-size:1.25rem;color:#888;">
         味で負けていないなら、<br>
-        あとは「<strong class="accent-text">知ってもらう仕組み</strong>」を整えるだけです。<br>
+        あとは「<strong class="accent-text">知ってもらう仕組み</strong>」を整えるだけ。<br>
         それをお手伝いするのが、<strong class="accent-text">繁盛SNS</strong>です。
       </p>
     </div>
@@ -339,32 +327,32 @@
       <p class="text-xs font-bold tracking-widest mb-4" style="color:rgba(255,255,255,.7);">選ばれる理由</p>
       <h2 class="font-black leading-snug mb-4 text-white"
           style="font-size:clamp(1.5rem,3.5vw,2rem);">
-        東北で、ここまでできる理由
+        繁盛SNSがおすすめな理由
       </h2>
       <p class="leading-loose mx-auto" style="font-size:.9375rem;color:rgba(255,255,255,.85);max-width:36em;">
-        Instagram運用からGoogleマップ対策、定期的な撮影まで。<br>なぜ、個人店でも無理なく導入できるのか。3つの理由があります。
+        繁盛SNSが選ばれている、3つの理由をご紹介します。
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
       <div class="rv d1 flex flex-col transition-all duration-300 hover:-translate-y-2"
-           style="background:#ffffff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-black leading-none select-none mb-4"
-             style="font-size:2.75rem;color:var(--accent);letter-spacing:-.02em;">01</p>
-          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">撮影・編集・投稿を<br>一つのチームで完結</h3>
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-4 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">01</p>
+          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">撮影から投稿まで<br>全部お任せできる</h3>
           <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
-            工程ごとにバラバラに外注する必要がないため、コストを大幅に抑えてまるごと提供できます。
+            撮影・編集・投稿を一つのチームで完結。バラバラに外注しないから、低コストでまるごと提供できます。
           </p>
         </div>
       </div>
 
       <div class="rv d2 flex flex-col transition-all duration-300 hover:-translate-y-2"
-           style="background:#ffffff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-black leading-none select-none mb-4"
-             style="font-size:2.75rem;color:var(--accent);letter-spacing:-.02em;">02</p>
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-4 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">02</p>
           <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);"><span style="white-space:nowrap;">「来店」だけを目的にした</span>運用設計</h3>
           <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
             フォロワー数や検索順位ではなく、お客さんが来ること。すべての施策を「来店」に絞り込んでいます。
@@ -373,10 +361,10 @@
       </div>
 
       <div class="rv d3 flex flex-col transition-all duration-300 hover:-translate-y-2"
-           style="background:#ffffff;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
-        <div class="p-8 flex flex-col flex-1">
-          <p class="font-black leading-none select-none mb-4"
-             style="font-size:2.75rem;color:var(--accent);letter-spacing:-.02em;">03</p>
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-4 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">03</p>
           <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">東北エリアに<br>特化している</h3>
           <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
             東北の食文化・季節感・地域性を理解した上でコンテンツを設計。全国一律のテンプレートとは違う、地元に刺さる発信ができます。
@@ -410,74 +398,82 @@
     <div class="flex flex-col gap-20">
 
       <!-- 01：Instagram運用（左画像・右テキスト） -->
-      <div class="rv d1 flex flex-col md:flex-row items-center gap-10">
-        <div class="w-full md:w-1/2">
-          <img src="service-instagram.jpg" alt="Instagram運用イメージ"
-               style="width:100%;border-radius:16px;object-fit:cover;max-height:320px;">
-        </div>
-        <div class="w-full md:w-1/2">
-          <p class="font-black leading-none select-none mb-3 accent-text"
-             style="font-size:3rem;letter-spacing:-.02em;">01</p>
-          <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
-            Instagram運用
-          </h3>
-          <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
-            リール動画月4本・写真投稿月4本。お店を知らない人のスマホに届く投稿を作ります。
-          </p>
+      <div class="rv d1" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-instagram.jpg" alt="Instagram運用イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">01</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              Instagram運用
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              リール動画月4本・写真投稿月4本。お店を知らない人のスマホに届く投稿を作ります。DMを活用したリピーター施策も含まれます。
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- 02：Googleマップ対策（右画像・左テキスト） -->
-      <div class="rv d2 flex flex-col md:flex-row-reverse items-center gap-10">
-        <div class="w-full md:w-1/2">
-          <img src="service-meo.jpg" alt="Googleマップ対策イメージ"
-               style="width:100%;border-radius:16px;object-fit:cover;max-height:320px;">
-        </div>
-        <div class="w-full md:w-1/2">
-          <p class="font-black leading-none select-none mb-3 accent-text"
-             style="font-size:3rem;letter-spacing:-.02em;">02</p>
-          <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
-            Googleマップ対策
-          </h3>
-          <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
-            「近くの居酒屋」で検索したときに、お店が上位に表示される状態を作ります。口コミへの返信も含めてお任せください。
-          </p>
+      <div class="rv d2" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-meo.jpg" alt="Googleマップ対策イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">02</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              Googleマップ対策
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              Googleマップで調べたときに、お店が上位に表示される状態を作ります。口コミへの返信も含めてお任せください。
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- 03：撮影・素材制作（左画像・右テキスト） -->
-      <div class="rv d3 flex flex-col md:flex-row items-center gap-10">
-        <div class="w-full md:w-1/2">
-          <img src="service-photo.jpg" alt="撮影・素材制作イメージ"
-               style="width:100%;border-radius:16px;object-fit:cover;max-height:320px;">
-        </div>
-        <div class="w-full md:w-1/2">
-          <p class="font-black leading-none select-none mb-3 accent-text"
-             style="font-size:3rem;letter-spacing:-.02em;">03</p>
-          <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
-            撮影・素材制作
-          </h3>
-          <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
-            映えではなく、「行きたい」と思わせる。3ヶ月に1回、約2〜3時間。料理・店内・外観をまとめて撮影し、投稿素材を制作します。
-          </p>
+      <div class="rv d3" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-photo.jpg" alt="撮影・素材制作イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">03</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              撮影・素材制作
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              映えではなく、「行きたい」と思わせる。3ヶ月に1回、約2〜3時間。料理・店内・外観をまとめて撮影し、投稿素材を制作します。
+            </p>
+          </div>
         </div>
       </div>
 
       <!-- 04：毎月の成果報告（右画像・左テキスト） -->
-      <div class="rv d4 flex flex-col md:flex-row-reverse items-center gap-10">
-        <div class="w-full md:w-1/2">
-          <img src="service-report.jpg" alt="毎月の成果報告イメージ"
-               style="width:100%;border-radius:16px;object-fit:cover;max-height:320px;">
-        </div>
-        <div class="w-full md:w-1/2">
-          <p class="font-black leading-none select-none mb-3 accent-text"
-             style="font-size:3rem;letter-spacing:-.02em;">04</p>
-          <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
-            毎月の成果報告
-          </h3>
-          <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
-            毎月、数字でご報告します。Googleマップの表示回数・お店への道順を調べた人の数など、来店に近い数字をお見せします。
-          </p>
+      <div class="rv d4" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-report.jpg" alt="毎月の成果報告イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">04</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              毎月の成果報告
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              毎月、数字でご報告します。Googleマップの表示回数・お店への道順を調べた人の数など、来店に近い数字をお見せします。
+            </p>
+          </div>
         </div>
       </div>
 
@@ -706,7 +702,7 @@
         続けるほど、<span class="accent-text">利益は積み上がる。</span>
       </h2>
       <p class="leading-loose mx-auto" style="font-size:.9375rem;color:var(--text-sub);max-width:32em;">
-        常連客は毎月積み上がるから、続けるほど利益が大きくなります。
+        続けるほど常連客が増えてくるので、利益が大きくなりやすいです。
       </p>
     </div>
 
@@ -755,7 +751,7 @@
             </div>
           </div>
           <p class="font-black accent-text leading-none mb-3" style="font-size:2.25rem;">3.6<span style="font-size:1.25rem;">倍</span></p>
-          <p class="font-bold" style="font-size:.9rem;color:var(--text-main);">5年間の投資リターン</p>
+          <p class="font-bold" style="font-size:.9rem;color:var(--text-main);">5年間で増える売上</p>
         </div>
       </div>
 
@@ -897,7 +893,7 @@
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
-            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">まったく問題ありません。企画・撮影・編集・投稿まですべてお任せください。オーナー様にお願いすることは、最初のご相談と3ヶ月に1回の撮影立ち会いのみです。</p>
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">まったく問題ありません。企画・撮影・編集・投稿まですべてお任せください。オーナー様にお願いすることは、最初のご相談と3ヶ月に1回の撮影立ち会いのみです。</p>
           </div>
         </div>
       </div>
@@ -910,7 +906,7 @@
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
-            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">Googleマップの対策は、一般的に3〜6ヶ月で検索表示回数に変化が出ると言われています。Instagramは3ヶ月目以降が目安です。常連客が積み上がるには6ヶ月〜1年のスパンをお見込みください。</p>
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">Googleマップの対策は、一般的に3〜6ヶ月で検索表示回数に変化が出ると言われています。Instagramは3ヶ月目以降が目安です。常連客が積み上がるには6ヶ月〜1年のスパンをお見込みください。</p>
           </div>
         </div>
       </div>
@@ -923,7 +919,7 @@
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
-            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">3ヶ月に1回、約2〜3時間をまとめて実施。料理・構成は事前打ち合わせで決定し、公開前にオーナー様にご確認いただきます。</p>
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">3ヶ月に1回、約2〜3時間をまとめて実施。料理・構成は事前打ち合わせで決定し、公開前にオーナー様にご確認いただきます。</p>
           </div>
         </div>
       </div>
@@ -936,7 +932,7 @@
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
-            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">最低6ヶ月、以降は自動更新。解約は1ヶ月前のお申し出で可能。詳しくは料金欄をご覧ください。</p>
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">最低6ヶ月、以降は自動更新。解約は1ヶ月前のお申し出で可能。詳しくは料金欄をご覧ください。</p>
           </div>
         </div>
       </div>
@@ -949,7 +945,7 @@
             <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
           </button>
           <div class="faq-body">
-            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-sub);">もちろん可能です。グルメサイトを続けながら、GoogleマップとInstagramを新たな集客チャネルとして追加する形になります。</p>
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">もちろん可能です。グルメサイトを続けながら、GoogleマップとInstagramを新たな集客チャネルとして追加する形になります。</p>
           </div>
         </div>
       </div>
@@ -975,7 +971,7 @@
            style="background:linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);border-radius:12px;padding:.75rem 2rem;box-shadow:0 8px 32px rgba(0,0,0,.15);cursor:pointer;transition:opacity .3s ease;">
         <p class="font-black leading-snug text-white"
            style="font-size:clamp(1.25rem,4vw,1.75rem);">
-          「SNSの件」と一声かけてください。
+          「SNSの件」とお声がけください。
         </p>
       </div>
 
