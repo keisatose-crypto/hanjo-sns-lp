@@ -331,7 +331,7 @@
     <!-- 救いと提案 -->
     <div class="rv d1">
       <p class="leading-loose" style="font-size:1.25rem;color:#888;">
-        味で負けていないなら、あとは「<strong class="accent-text">知ってもらう仕組み</strong>」を整えるだけ。それをお手伝いするのが、<strong class="accent-text">繁盛SNS</strong>です。
+        味で負けていないなら、あとは「<strong class="accent-text">知ってもらう仕組み</strong>」を整えるだけ。<br class="hidden md:block">それをお手伝いするのが、<strong class="accent-text">繁盛SNS</strong>です。
       </p>
     </div>
 
@@ -352,7 +352,7 @@
         繁盛SNSがおすすめな理由
       </h2>
       <p class="leading-loose mx-auto" style="font-size:.9375rem;color:rgba(255,255,255,.85);max-width:36em;">
-        繁盛SNSが選ばれている、<br>3つの理由をご紹介します。
+        繁盛SNSが選ばれている、<br class="md:hidden">3つの理由をご紹介します。
       </p>
     </div>
 
@@ -520,10 +520,10 @@
       <div class="mx-auto" style="width:40px;height:3px;background:var(--ig-gradient);border-radius:4px;"></div>
     </div>
 
-    <div class="rv grid grid-cols-3 gap-4 md:gap-8 text-center items-start mt-14">
+    <div class="rv flex md:grid md:grid-cols-3 gap-4 md:gap-8 text-center items-start mt-14 overflow-x-auto pb-4 md:pb-0 md:overflow-visible" style="-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;">
 
       <!-- STEP 01 -->
-      <div class="rv d1 flex flex-col items-center relative">
+      <div class="rv d1 flex flex-col items-center relative flex-shrink-0" style="min-width:200px;scroll-snap-align:start;">
         <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
           <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">01</span>
         </p>
@@ -547,7 +547,7 @@
       </div>
 
       <!-- STEP 02 -->
-      <div class="rv d2 flex flex-col items-center relative">
+      <div class="rv d2 flex flex-col items-center relative flex-shrink-0" style="min-width:200px;scroll-snap-align:start;">
         <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
           <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">02</span>
         </p>
@@ -572,7 +572,7 @@
       </div>
 
       <!-- STEP 03 -->
-      <div class="rv d3 flex flex-col items-center">
+      <div class="rv d3 flex flex-col items-center flex-shrink-0" style="min-width:200px;scroll-snap-align:start;">
         <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
           <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">03</span>
         </p>
@@ -1034,7 +1034,7 @@
           chartObs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.05 });
     chartObs.observe(chartEl);
   }
 
