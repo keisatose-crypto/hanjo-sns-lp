@@ -372,7 +372,7 @@
              style="font-size:2.75rem;letter-spacing:-.02em;">02</p>
           <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);"><span style="white-space:nowrap;">来店だけを目的にした</span>運用設計</h3>
           <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
-            フォロワー数を増やすことや、検索順位を上げることを目的にしていません。クーポンやDMを活用した再来店の仕組みづくりも含め、実際にお店に来てくれるお客様を増やすことを目的としています。
+            フォロワー数を増やすことや、検索順位を上げるだけではなく、クーポンやDMを活用した再来店の仕組みづくり等、実際にお店に来てくれるお客様を増やすことを目的としています。
           </p>
         </div>
       </div>
@@ -733,12 +733,12 @@
         <!-- SVG線グラフ（2本線：累計粗利 vs 累計費用） -->
         <!-- 累計粗利: 0→54.5万→214万→466万→790万→1189万 -->
         <!-- 累計費用: 0→66万→132万→198万→264万→330万 -->
-        <!-- Y軸: 0=220, 1000万=40 → 1万あたり(220-40)/1000=0.18px -->
+        <!-- Y軸: 0=220, 1200万=30 → 1万あたり(220-30)/1200=0.158px -->
         <!-- X軸: 開始=80, 1年=178, 2年=276, 3年=374, 4年=472, 5年=570 -->
-        <!-- 粗利Y: 0→220, 54.5→210, 214→181, 466→136, 790→78, 1189→6 -->
-        <!-- 費用Y: 0→220, 66→208, 132→196, 198→184, 264→172, 330→161 -->
+        <!-- 粗利Y: 0→220, 54.5→211, 214→186, 466→146, 790→95, 1189→32 -->
+        <!-- 費用Y: 0→220, 66→210, 132→199, 198→189, 264→178, 330→168 -->
         <div style="position:relative;width:100%;overflow-x:auto;">
-          <svg viewBox="0 0 620 270" style="width:100%;min-width:480px;height:auto;" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 620 260" style="width:100%;min-width:480px;height:auto;" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="line-grad" x1="0" y1="0" x2="1" y2="0">
                 <stop offset="0%" stop-color="#f09433"/>
@@ -752,31 +752,31 @@
             </defs>
 
             <!-- グリッド線（横） -->
-            <line x1="80" y1="40" x2="580" y2="40" stroke="#f0f0f0" stroke-width="1"/>
-            <line x1="80" y1="76" x2="580" y2="76" stroke="#f0f0f0" stroke-width="1"/>
-            <line x1="80" y1="112" x2="580" y2="112" stroke="#f0f0f0" stroke-width="1"/>
-            <line x1="80" y1="148" x2="580" y2="148" stroke="#f0f0f0" stroke-width="1"/>
-            <line x1="80" y1="184" x2="580" y2="184" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="30" x2="580" y2="30" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="68" x2="580" y2="68" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="106" x2="580" y2="106" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="144" x2="580" y2="144" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="182" x2="580" y2="182" stroke="#f0f0f0" stroke-width="1"/>
             <line x1="80" y1="220" x2="580" y2="220" stroke="#d1d5db" stroke-width="1.5"/>
 
             <!-- Y軸ラベル -->
-            <text x="72" y="44" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">1,000万</text>
-            <text x="72" y="80" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">800万</text>
-            <text x="72" y="116" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">600万</text>
-            <text x="72" y="152" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">400万</text>
-            <text x="72" y="188" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">200万</text>
+            <text x="72" y="34" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">1,200万</text>
+            <text x="72" y="72" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">1,000万</text>
+            <text x="72" y="110" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">800万</text>
+            <text x="72" y="148" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">600万</text>
+            <text x="72" y="186" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">400万</text>
             <text x="72" y="224" text-anchor="end" fill="#9ca3af" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">0</text>
 
             <!-- エリア塗り（粗利の下） -->
-            <path class="roi-area" d="M80,220 L178,210 L276,181 L374,136 L472,78 L570,6 L570,220 Z"
+            <path class="roi-area" d="M80,220 L178,211 L276,186 L374,146 L472,95 L570,32 L570,220 Z"
                   fill="url(#area-grad)"/>
 
             <!-- 費用の累計線（グレー破線） -->
-            <polyline class="roi-line" points="80,220 178,208 276,196 374,184 472,172 570,161"
+            <polyline class="roi-line" points="80,220 178,210 276,199 374,189 472,178 570,168"
                       fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 4" style="stroke-dasharray:6 4!important;stroke-dashoffset:0!important;"/>
 
             <!-- 粗利の累計線（グラデーション） -->
-            <polyline class="roi-line" points="80,220 178,210 276,181 374,136 472,78 570,6"
+            <polyline class="roi-line" points="80,220 178,211 276,186 374,146 472,95 570,32"
                       fill="none" stroke="url(#line-grad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
 
             <!-- 交差点ラベル（1年目後半・線の上に配置） -->
@@ -787,27 +787,27 @@
             <circle class="roi-dot" style="transition-delay:.2s" cx="80" cy="220" r="4" fill="#fff" stroke="#f09433" stroke-width="2"/>
             <text class="roi-label" style="transition-delay:.2s" x="80" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">開始</text>
 
-            <circle class="roi-dot" style="transition-delay:.55s" cx="178" cy="210" r="4" fill="#fff" stroke="#e6683c" stroke-width="2"/>
+            <circle class="roi-dot" style="transition-delay:.55s" cx="178" cy="211" r="4" fill="#fff" stroke="#e6683c" stroke-width="2"/>
             <text class="roi-label" style="transition-delay:.55s" x="178" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">1年目</text>
 
-            <circle class="roi-dot" style="transition-delay:.9s" cx="276" cy="181" r="5" fill="#fff" stroke="#dc2743" stroke-width="2.5"/>
+            <circle class="roi-dot" style="transition-delay:.9s" cx="276" cy="186" r="5" fill="#fff" stroke="#dc2743" stroke-width="2.5"/>
             <text class="roi-label" style="transition-delay:.9s" x="276" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">2年目</text>
 
-            <circle class="roi-dot" style="transition-delay:1.25s" cx="374" cy="136" r="5" fill="#fff" stroke="#cc2366" stroke-width="2.5"/>
+            <circle class="roi-dot" style="transition-delay:1.25s" cx="374" cy="146" r="5" fill="#fff" stroke="#cc2366" stroke-width="2.5"/>
             <text class="roi-label" style="transition-delay:1.25s" x="374" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">3年目</text>
 
-            <circle class="roi-dot" style="transition-delay:1.55s" cx="472" cy="78" r="5" fill="#fff" stroke="#bc1888" stroke-width="2.5"/>
+            <circle class="roi-dot" style="transition-delay:1.55s" cx="472" cy="95" r="5" fill="#fff" stroke="#bc1888" stroke-width="2.5"/>
             <text class="roi-label" style="transition-delay:1.55s" x="472" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">4年目</text>
 
-            <circle class="roi-dot" style="transition-delay:1.8s" cx="570" cy="6" r="6" fill="#fff" stroke="#bc1888" stroke-width="3"/>
+            <circle class="roi-dot" style="transition-delay:1.8s" cx="570" cy="32" r="6" fill="#fff" stroke="#bc1888" stroke-width="3"/>
             <text class="roi-label" style="transition-delay:1.8s" x="570" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">5年目</text>
 
             <!-- 費用ポイント（小さめ） -->
-            <circle class="roi-dot" style="transition-delay:.55s" cx="178" cy="208" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
-            <circle class="roi-dot" style="transition-delay:.9s" cx="276" cy="196" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
-            <circle class="roi-dot" style="transition-delay:1.25s" cx="374" cy="184" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
-            <circle class="roi-dot" style="transition-delay:1.55s" cx="472" cy="172" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
-            <circle class="roi-dot" style="transition-delay:1.8s" cx="570" cy="161" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:.55s" cx="178" cy="210" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:.9s" cx="276" cy="199" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:1.25s" cx="374" cy="189" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:1.55s" cx="472" cy="178" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:1.8s" cx="570" cy="168" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
           </svg>
         </div>
 
