@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>繁盛SNS｜限定5店舗 無料トライアルのご案内</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg-white:  #ffffff;
+      --bg-gray:   #f8f9fa;
+      --bg-dark:   #1a1a1a;
+      --text-main: #1F2937;
+      --text-sub:  #6B7280;
+      --accent:    #e6683c;
+      --ig-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: var(--text-main);
+      background: var(--bg-white);
+    }
+    .accent-text { background: var(--ig-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .accent-bg   { background: var(--ig-gradient); }
+    .ig-underline { background-image: var(--ig-gradient); background-size: 100% 30%; background-position: bottom left; background-repeat: no-repeat; }
+
+    .rv { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+    .rv.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .10s; }
+    .d2 { transition-delay: .20s; }
+    .d3 { transition-delay: .30s; }
+    .d4 { transition-delay: .40s; }
+
+    .roi-line { stroke-dasharray: 800; stroke-dashoffset: 800; }
+    .roi-line.on { stroke-dashoffset: 0; transition: stroke-dashoffset 1.8s ease; }
+    .roi-area { opacity: 0; }
+    .roi-area.on { opacity: 1; transition: opacity 1s ease 1.2s; }
+    .roi-dot { opacity: 0; transform: scale(0); transform-origin: center; transform-box: fill-box; }
+    .roi-dot.on { opacity: 1; transform: scale(1); transition: opacity .3s ease, transform .3s ease; }
+    .roi-label { opacity: 0; }
+    .roi-label.on { opacity: 1; transition: opacity .3s ease; }
+
+    @media(max-width:767px){
+      .service-img{max-height:200px!important;}
+      .hero-tag{font-size:.8rem!important;padding:6px 12px!important;}
+      .hero-text{padding:1.25rem!important;}
+      .hero-mockup{height:min(380px,65vw)!important;}
+      .hero-phone-left{width:150px!important;}
+      .hero-phone-right{width:160px!important;}
+      .flow-circle{width:70px!important;height:70px!important;}
+      .flow-circle svg{width:30px!important;height:30px!important;}
+      .flow-title{font-size:.9rem!important;}
+      .flow-desc{font-size:.75rem!important;}
+      .problem-sub{font-size:.8rem!important;}
+      .flow-step{font-size:.65rem!important;}
+      .flow-step-num{font-size:1.1rem!important;}
+.roi-graph-inner{padding:1.25rem!important;}
+      .roi-graph-title{font-size:1rem!important;}
+      .roi-graph-sub{font-size:.75rem!important;}
+      .section-pad{padding-top:3.5rem!important;padding-bottom:3.5rem!important;}
+      .truth-heading{font-size:1.25rem!important;}
+      .price-amount{font-size:2.5rem!important;}
+      .faq-question{font-size:.85rem!important;}
+      .cta-heading{font-size:1.1rem!important;}
+    }
+    @media(min-width:768px){
+    }
+
+    .cta-btn:hover { opacity: .7; }
+
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height .38s cubic-bezier(.4,0,.2,1); }
+    .faq-open .faq-body { max-height: 500px; }
+    .faq-icon { transition: transform .3s; display: inline-block; }
+    .faq-open .faq-icon { transform: rotate(45deg); }
+  </style>
+</head>
+<body>
+
+
+<!-- ════════════════════════════════════
+  HEADER
+════════════════════════════════════ -->
+<header style="background:var(--bg-white);border-bottom:1px solid #e5e7eb;"
+        class="sticky top-0 z-50 backdrop-blur-md">
+  <div class="px-6 py-4">
+    <div class="font-black tracking-widest" style="font-size:1.15rem;color:var(--text-main);">
+      繁盛<span class="accent-text">SNS</span>
+    </div>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════
+  HERO（2カラム・クリーン背景）
+════════════════════════════════════ -->
+<section class="relative px-6 overflow-visible"
+         style="background:#1a1a1a url('hero-bg.jpg') center/cover no-repeat;padding-top:5rem;padding-bottom:5rem;">
+
+  <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-16" style="position:relative;z-index:1;">
+
+    <!-- 左：テキスト (60%) -->
+    <div class="rv flex-1 md:max-w-[58%] px-8 py-8 hero-text"
+         style="background:rgba(0,0,0,.82);border-radius:16px;backdrop-filter:blur(4px);">
+
+      <!-- タグ -->
+      <div class="mb-8">
+        <span class="hero-tag inline-block font-bold tracking-widest px-4 py-2"
+              style="font-size:1rem;color:#fff;background:var(--ig-gradient);border-radius:6px;">
+          限定5店舗 無料トライアルのご案内
+        </span>
+      </div>
+
+      <!-- メインキャッチ -->
+      <h1 class="font-black leading-tight mb-5 text-white"
+          style="font-size:clamp(1.5rem,4vw,2.5rem);">
+        <span style="white-space:nowrap;">味には自信があるのに、</span><br>客席が埋まらない。
+      </h1>
+
+      <!-- サブコピー -->
+      <p class="font-black leading-snug mb-8 accent-text"
+         style="font-size:clamp(1.5rem,4vw,2rem);">
+        その悩み、そろそろ<br>終わりにしませんか？
+      </p>
+
+      <!-- 説明文 -->
+      <p class="leading-loose mb-8" style="font-size:1rem;color:#aaaaaa;">
+        Instagram・Googleマップの集客、撮影から投稿まで全部お任せください。
+      </p>
+
+    </div>
+
+    <!-- 右：iPhone 16風 スマホ2台モックアップ（扇形配置） -->
+    <div class="rv d1 w-full md:w-[42%] flex-shrink-0 flex justify-center items-center">
+      <div class="hero-mockup" style="position:relative;width:min(360px,85vw);height:min(520px,70vw);">
+
+        <!-- 左スマホ（背面・反時計回り12度・左下） -->
+        <div style="position:absolute;bottom:10px;left:0;z-index:1;transform:perspective(600px) rotate(-12deg) rotateY(0deg);transform-origin:bottom center;transition:transform .3s ease;" onmouseenter="this.style.transform='perspective(600px) rotate(-12deg) rotateY(-15deg)'" onmouseleave="this.style.transform='perspective(600px) rotate(-12deg) rotateY(0deg)'">
+          <!-- サイドボタン（左：音量） -->
+          <div style="position:absolute;left:-3px;top:60px;width:3px;height:18px;background:#2a2a2a;border-radius:2px 0 0 2px;"></div>
+          <div style="position:absolute;left:-3px;top:84px;width:3px;height:28px;background:#2a2a2a;border-radius:2px 0 0 2px;"></div>
+          <div style="position:absolute;left:-3px;top:118px;width:3px;height:28px;background:#2a2a2a;border-radius:2px 0 0 2px;"></div>
+          <!-- サイドボタン（右：電源） -->
+          <div style="position:absolute;right:-3px;top:80px;width:3px;height:38px;background:#2a2a2a;border-radius:0 2px 2px 0;"></div>
+          <!-- 本体 -->
+          <div class="hero-phone-left" style="width:195px;background:#1a1a1a;border-radius:40px;padding:10px;box-shadow:0 0 0 1px #3a3a3a, 0 0 0 2px #222, 0 20px 60px rgba(0,0,0,.7);">
+            <!-- 画面 -->
+            <div style="border-radius:30px;overflow:hidden;background:#fff;position:relative;">
+              <!-- Dynamic Island -->
+              <div style="position:absolute;top:6px;left:50%;transform:translateX(-50%);width:52px;height:10px;background:#1a1a1a;border-radius:20px;z-index:10;"></div>
+              <!-- ステータスバー -->
+              <div style="height:24px;background:#fff;"></div>
+              <!-- Instagram UI -->
+              <div style="display:flex;align-items:center;gap:5px;padding:5px 7px;border-bottom:1px solid #efefef;">
+                <div style="width:20px;height:20px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);padding:2px;flex-shrink:0;">
+                  <div style="width:100%;height:100%;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;">
+                    <div style="width:14px;height:14px;border-radius:50%;overflow:hidden;">
+                      <img src="hero-phone5.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                  </div>
+                </div>
+                <div style="flex:1;min-width:0;">
+                  <p style="font-size:.5rem;font-weight:700;color:#111;line-height:1.2;">hanjou_sns</p>
+                  <p style="font-size:.45rem;color:#888;">宮城・仙台</p>
+                </div>
+                <span style="font-size:.45rem;font-weight:700;color:#0095f6;">フォロー中</span>
+              </div>
+              <div style="width:100%;aspect-ratio:4/5;overflow:hidden;">
+                <img src="hero-phone5.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="padding:5px 7px 8px;">
+                <div style="font-size:.7rem;margin-bottom:2px;">♡ 💬 ✈</div>
+                <p style="font-size:.48rem;font-weight:700;color:#111;margin-bottom:1px;">いいね！ 1,892件</p>
+                <p style="font-size:.44rem;color:#111;line-height:1.4;"><span style="font-weight:700;">hanjou_sns</span> 本日の旬の一品</p>
+              </div>
+              <!-- ホームインジケーター -->
+              <div style="height:16px;background:#fff;display:flex;align-items:center;justify-content:center;">
+                <div style="width:40px;height:3px;background:#ccc;border-radius:4px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右スマホ（前面・時計回り8度・右上） -->
+        <div style="position:absolute;top:10px;right:0;z-index:2;transform:perspective(600px) rotate(8deg) rotateY(0deg);transform-origin:bottom center;transition:transform .3s ease;" onmouseenter="this.style.transform='perspective(600px) rotate(8deg) rotateY(15deg)'" onmouseleave="this.style.transform='perspective(600px) rotate(8deg) rotateY(0deg)'">
+          <!-- サイドボタン（左：音量） -->
+          <div style="position:absolute;left:-3px;top:60px;width:3px;height:18px;background:#2a2a2a;border-radius:2px 0 0 2px;"></div>
+          <div style="position:absolute;left:-3px;top:84px;width:3px;height:28px;background:#2a2a2a;border-radius:2px 0 0 2px;"></div>
+          <div style="position:absolute;left:-3px;top:118px;width:3px;height:28px;background:#2a2a2a;border-radius:2px 0 0 2px;"></div>
+          <!-- サイドボタン（右：電源） -->
+          <div style="position:absolute;right:-3px;top:80px;width:3px;height:38px;background:#2a2a2a;border-radius:0 2px 2px 0;"></div>
+          <!-- 本体 -->
+          <div class="hero-phone-right" style="width:205px;background:#1a1a1a;border-radius:40px;padding:10px;box-shadow:0 0 0 1px #3a3a3a, 0 0 0 2px #222, 0 24px 64px rgba(0,0,0,.75);">
+            <!-- 画面 -->
+            <div style="border-radius:30px;overflow:hidden;background:#fff;position:relative;">
+              <!-- Dynamic Island -->
+              <div style="position:absolute;top:6px;left:50%;transform:translateX(-50%);width:56px;height:11px;background:#1a1a1a;border-radius:20px;z-index:10;"></div>
+              <!-- ステータスバー -->
+              <div style="height:26px;background:#fff;"></div>
+              <!-- Instagram UI -->
+              <div style="display:flex;align-items:center;gap:5px;padding:6px 8px;border-bottom:1px solid #efefef;">
+                <div style="width:22px;height:22px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);padding:2px;flex-shrink:0;">
+                  <div style="width:100%;height:100%;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;">
+                    <div style="width:16px;height:16px;border-radius:50%;overflow:hidden;">
+                      <img src="hero-phone6.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                  </div>
+                </div>
+                <div style="flex:1;min-width:0;">
+                  <p style="font-size:.52rem;font-weight:700;color:#111;line-height:1.2;">hanjou_sns</p>
+                  <p style="font-size:.46rem;color:#888;">宮城・仙台</p>
+                </div>
+                <span style="font-size:.46rem;font-weight:700;color:#0095f6;">フォロー中</span>
+              </div>
+              <div style="width:100%;aspect-ratio:4/5;overflow:hidden;">
+                <img src="hero-phone6.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div style="padding:6px 8px 9px;">
+                <div style="font-size:.75rem;margin-bottom:2px;">♡ 💬 ✈</div>
+                <p style="font-size:.5rem;font-weight:700;color:#111;margin-bottom:2px;">いいね！ 2,345件</p>
+                <p style="font-size:.46rem;color:#111;line-height:1.5;"><span style="font-weight:700;">hanjou_sns</span> 今夜も仕込み完了</p>
+              </div>
+              <!-- ホームインジケーター -->
+              <div style="height:16px;background:#fff;display:flex;align-items:center;justify-content:center;">
+                <div style="width:44px;height:3px;background:#ccc;border-radius:4px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  PROBLEM（薄Instagramグラデーション背景）
+════════════════════════════════════ -->
+<section style="background:linear-gradient(135deg, rgba(240,148,51,.07), rgba(230,104,60,.07), rgba(220,39,67,.07), rgba(204,35,102,.07), rgba(188,24,136,.07));" class="py-24 px-6 section-pad">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="rv mb-14 text-center">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">お悩み</p>
+      <h2 class="font-black leading-snug mb-6"
+          style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
+        なぜ、いい店なのに<br>お客さんが来ないのか？
+      </h2>
+      <p class="leading-loose mx-auto problem-sub" style="font-size:.9375rem;color:var(--text-sub);max-width:36em;">
+        仕込みと営業で一日が終わる。SNSやネット集客まで手が回らない。<br>
+        そんなオーナー様に共通する悩みがあります。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+      <!-- 01カード -->
+      <div class="rv d1 flex flex-col transition-all duration-300 hover:-translate-y-2"
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.1);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-5 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">01</p>
+          <h3 class="font-black mb-4" style="font-size:1.125rem;color:var(--text-main);">
+            Googleマップで<br>上位に出てこない
+          </h3>
+          <p class="leading-loose mt-auto" style="font-size:.9rem;color:var(--text-sub);">
+            Googleマップで検索されても、他のお店の下に埋もれたまま。見つけてもらえないまま、素通りされているかもしれません。
+          </p>
+        </div>
+      </div>
+
+      <!-- 02カード -->
+      <div class="rv d2 flex flex-col transition-all duration-300 hover:-translate-y-2"
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.1);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-5 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">02</p>
+          <h3 class="font-black mb-4" style="font-size:1.0625rem;color:var(--text-main);word-break:keep-all;overflow-wrap:break-word;">
+            Instagramに投稿しても新規客につながらない
+          </h3>
+          <p class="leading-loose mt-auto" style="font-size:.9rem;color:var(--text-sub);">
+            料理を撮って投稿するだけでは、フォロワー以外の人には届きません。新規客に届けるには、仕組みが要ります。
+          </p>
+        </div>
+      </div>
+
+      <!-- 03カード -->
+      <div class="rv d3 flex flex-col transition-all duration-300 hover:-translate-y-2"
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.1);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-5 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">03</p>
+          <h3 class="font-black mb-4" style="font-size:1.125rem;color:var(--text-main);">
+            忙しくて<br>手が回らない
+          </h3>
+          <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+            毎日の仕込み・営業・接客で精一杯。SNS運用のための時間も、ノウハウも、人手もない。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  TRUTH（薄ウォームグレー・和の質感）
+════════════════════════════════════ -->
+<section style="background:#ffffff;" class="py-24 px-6 section-pad">
+  <div class="max-w-2xl mx-auto text-center">
+
+    <!-- 残酷な事実 -->
+    <div class="rv mb-14">
+      <p class="font-black leading-relaxed truth-heading"
+         style="font-size:clamp(1.75rem,4vw,2.5rem);color:var(--text-main);">
+        どれだけ料理が美味しくても、<br>
+        <span class="accent-text" style="display:inline;">スマホで見つけてもらえなければ、</span><br>
+        せっかくの美味しさは<br>お客様に届きにくいままです。
+      </p>
+    </div>
+
+    <!-- 救いと提案 -->
+    <div class="rv d1">
+      <p class="leading-loose" style="font-size:1.25rem;color:#888;">
+        そんな「もったいない」を減らしていきたい。<br>それが<strong class="accent-text">繁盛SNS</strong>の想いです。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  WHY（Instagramグラデーション背景）
+════════════════════════════════════ -->
+<section style="background:linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);" class="py-24 px-6 section-pad">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="rv mb-14 text-center">
+      <p class="text-xs font-bold tracking-widest mb-4" style="color:rgba(255,255,255,.7);">選ばれる理由</p>
+      <h2 class="font-black leading-snug mb-4 text-white"
+          style="font-size:clamp(1.5rem,3.5vw,2rem);">
+        繁盛SNSがおすすめな理由
+      </h2>
+      <p class="leading-loose mx-auto" style="font-size:.9375rem;color:rgba(255,255,255,.85);max-width:36em;">
+        繁盛SNSが選ばれている、<br class="md:hidden">3つの理由をご紹介します。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <div class="rv d1 flex flex-col transition-all duration-300 hover:-translate-y-2"
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-4 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">01</p>
+          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">企画から分析まで<br>全部お任せ</h3>
+          <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+            撮影・編集・投稿はもちろん、コメント返信・DM対応・口コミ返信・毎月の成果分析・改善提案まで、運用全般をお任せいただけます。オーナー様は料理と接客だけに集中できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="rv d2 flex flex-col transition-all duration-300 hover:-translate-y-2"
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-4 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">02</p>
+          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);"><span style="white-space:nowrap;">来店だけを目的にした</span>運用設計</h3>
+          <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+            フォロワー数を増やすことや、検索順位を上げるだけではなく、クーポンやDMを活用した再来店の仕組みづくり等、実際にお店に来てくれるお客様を増やすことを目的としています。
+          </p>
+        </div>
+      </div>
+
+      <div class="rv d3 flex flex-col transition-all duration-300 hover:-translate-y-2"
+           style="padding:3px;background:var(--ig-gradient);border-radius:18px;box-shadow:0 8px 40px rgba(0,0,0,.15);">
+        <div class="p-8 flex flex-col flex-1" style="background:#fff;border-radius:15px;">
+          <p class="font-black leading-none select-none mb-4 accent-text"
+             style="font-size:2.75rem;letter-spacing:-.02em;">03</p>
+          <h3 class="font-black mb-3" style="font-size:1.125rem;color:var(--text-main);">続けるほど、お店に<br>残る力が強くなります</h3>
+          <p class="leading-loose" style="font-size:.9rem;color:var(--text-sub);">
+            Googleマップの口コミ、Instagramのフォロワー、撮影した写真や動画は、すべてお店に残り続けます。続けた分だけ、お店を支え続ける力になっていきます。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  SERVICE（白背景・交互レイアウト）
+════════════════════════════════════ -->
+<section style="background:var(--bg-white);" class="py-24 px-6 section-pad">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="rv mb-16 text-center">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">サービス内容</p>
+      <h2 class="font-black leading-snug mb-5"
+          style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
+        すべてお任せ、4つのサービス
+      </h2>
+      <p class="font-black leading-relaxed mx-auto accent-text"
+         style="font-size:clamp(1.125rem,3vw,1.5rem);max-width:30em;">
+        オーナーのやることは、<br>美味しい料理を出すことだけです。
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-20">
+
+      <!-- 01：Instagram運用（左画像・右テキスト） -->
+      <div class="rv d1" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-instagram.jpg" alt="Instagram運用イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">01</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              Instagram運用
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              リール動画月4本・写真投稿月4本。お店を知らない人のスマホに届く投稿を作ります。DMを活用したリピーター施策も含まれます。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02：Googleマップ対策（右画像・左テキスト） -->
+      <div class="rv d2" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-meo.jpg" alt="Googleマップ対策イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">02</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              Googleマップ対策
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              Googleマップで調べたときに、お店が上位に表示される状態を作ります。口コミへの返信も含めてお任せください。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03：撮影・素材制作（左画像・右テキスト） -->
+      <div class="rv d3" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-photo.jpg" alt="撮影・素材制作イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">03</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              撮影・素材制作
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              映えではなく、「行きたい」と思わせる。3ヶ月に1回、約2〜3時間。料理・店内・外観をまとめて撮影し、投稿素材を制作します。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04：毎月の成果報告（右画像・左テキスト） -->
+      <div class="rv d4" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-10 p-8" style="background:#fff;border-radius:19px;">
+          <div class="w-full md:w-1/2">
+            <img src="service-report.jpg" alt="毎月の成果報告イメージ"
+                 class="service-img" style="width:100%;border-radius:14px;object-fit:cover;max-height:320px;">
+          </div>
+          <div class="w-full md:w-1/2">
+            <p class="font-black leading-none select-none mb-3 accent-text"
+               style="font-size:3rem;letter-spacing:-.02em;">04</p>
+            <h3 class="font-black mb-4" style="font-size:1.375rem;color:var(--text-main);">
+              毎月の成果報告
+            </h3>
+            <p class="leading-loose" style="font-size:.95rem;color:var(--text-sub);">
+              毎月、来店につながる数字をわかりやすくご報告します。Instagramのリーチ数、Googleマップの検索表示回数・ルート検索数など、来店に近い指標を中心にお伝えし、翌月の改善提案も行います。
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  FLOW（薄Instagramグラデーション・横並び）
+════════════════════════════════════ -->
+<section style="background:linear-gradient(135deg, rgba(240,148,51,.07), rgba(230,104,60,.07), rgba(220,39,67,.07), rgba(204,35,102,.07), rgba(188,24,136,.07));" class="py-24 px-6 section-pad">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="rv mb-6 text-center">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">はじめ方</p>
+      <h2 class="font-black leading-snug mb-3"
+          style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
+        はじめるまでの3ステップ
+      </h2>
+      <!-- アンダーバー -->
+      <div class="mx-auto" style="width:40px;height:3px;background:var(--ig-gradient);border-radius:4px;"></div>
+    </div>
+
+    <div class="rv flex md:grid md:grid-cols-3 gap-4 md:gap-8 text-center items-start mt-14 overflow-x-auto pb-4 md:pb-0 md:overflow-visible" style="-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;">
+
+      <!-- STEP 01 -->
+      <div class="rv d1 flex flex-col items-center relative flex-shrink-0" style="min-width:200px;scroll-snap-align:start;">
+        <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
+          <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">01</span>
+        </p>
+        <div class="rounded-full flex items-center justify-center mb-6 flow-circle"
+             style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
+          <div class="w-full h-full rounded-full flex items-center justify-center" style="background:#fff;">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <defs><linearGradient id="ig-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f09433"/><stop offset="50%" stop-color="#dc2743"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+        </div>
+        <!-- 矢印（PC時のみ） -->
+        <div class="hidden md:block absolute right-0 top-20" style="opacity:.2;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-main)" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+        <h3 class="font-black mb-3 flow-title" style="font-size:1.125rem;color:var(--text-main);">ご相談</h3>
+        <p class="leading-loose flow-desc" style="font-size:.9rem;color:var(--text-sub);">
+          まずはいつもの担当者に<br>お声がけください。
+        </p>
+      </div>
+
+      <!-- STEP 02 -->
+      <div class="rv d2 flex flex-col items-center relative flex-shrink-0" style="min-width:200px;scroll-snap-align:start;">
+        <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
+          <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">02</span>
+        </p>
+        <div class="rounded-full flex items-center justify-center mb-6 flow-circle"
+             style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
+          <div class="w-full h-full rounded-full flex items-center justify-center" style="background:#fff;">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+        </div>
+        <div class="hidden md:block absolute right-0 top-20" style="opacity:.2;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-main)" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+        <h3 class="font-black mb-3 flow-title" style="font-size:1.125rem;color:var(--text-main);">ご提案</h3>
+        <p class="leading-loose flow-desc" style="font-size:.9rem;color:var(--text-sub);">
+          お店に合った施策案をお持ちします。<br>納得いただけた場合のみ契約へ。
+        </p>
+      </div>
+
+      <!-- STEP 03 -->
+      <div class="rv d3 flex flex-col items-center flex-shrink-0" style="min-width:200px;scroll-snap-align:start;">
+        <p class="font-black tracking-widest mb-4 flow-step" style="font-size:.8rem;">
+          <span style="color:var(--text-main);">STEP</span><span class="accent-text flow-step-num" style="font-size:1.5rem;margin-left:4px;">03</span>
+        </p>
+        <div class="rounded-full flex items-center justify-center mb-6 flow-circle"
+             style="width:100px;height:100px;padding:3px;background:var(--ig-gradient);box-shadow:0 6px 24px rgba(0,0,0,.1);">
+          <div class="w-full h-full rounded-full flex items-center justify-center" style="background:#fff;">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+        </div>
+        <h3 class="font-black mb-3 flow-title" style="font-size:1.125rem;color:var(--text-main);">運用スタート</h3>
+        <p class="leading-loose flow-desc" style="font-size:.9rem;color:var(--text-sub);">
+          初回撮影・セットアップ後、<br>翌月から投稿を開始します。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  PRICE（薄グレー背景・中央カード）
+════════════════════════════════════ -->
+<section style="background:var(--bg-gray);" class="py-24 px-6 section-pad">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="rv mb-14 text-center">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">料金</p>
+      <h2 class="font-black leading-snug"
+          style="font-size:clamp(1.5rem,3.5vw,2rem);color:var(--text-main);">
+        限定5店舗 無料トライアル
+      </h2>
+      <p class="leading-loose mx-auto mt-4" style="font-size:.9375rem;color:var(--text-sub);max-width:32em;">
+        本来月額55,000円（税込）のサービスを、先着5店舗様に限り3ヶ月間無料でご提供いたします。
+      </p>
+    </div>
+
+    <!-- 料金カード（グラデーション枠） -->
+    <div class="rv d1 mx-auto" style="max-width:540px;padding:3px;background:var(--ig-gradient);border-radius:22px;box-shadow:0 8px 40px rgba(0,0,0,.12);">
+    <div style="background:#ffffff;border-radius:19px;overflow:hidden;">
+
+      <!-- ヘッダー（グラデーション） -->
+      <div class="text-center py-8 px-6" style="background:var(--ig-gradient);">
+        <p class="font-bold text-white mb-2" style="font-size:.875rem;opacity:.7;text-decoration:line-through;">通常 月額 ¥55,000（税込）</p>
+        <p class="font-black text-white leading-none price-amount"
+           style="font-size:clamp(2.5rem,8vw,3.5rem);">
+          ¥0<span style="font-size:.35em;font-weight:500;opacity:.65;">（無料）</span>
+        </p>
+        <p class="font-bold text-white mt-3" style="font-size:1.125rem;opacity:.9;">先着5店舗様限定・3ヶ月間</p>
+      </div>
+
+      <!-- 含まれるサービス -->
+      <div class="p-8">
+
+        <!-- Instagram運用代行 -->
+        <p class="font-black text-sm tracking-widest mb-4" style="color:var(--text-main);">Instagram運用代行</p>
+        <ul class="mb-6 flex flex-col gap-0">
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>リール月4本・写真投稿月4本
+          </li>
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>DM活用リピーター施策
+          </li>
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>エリア最適化 / ハッシュタグ設計
+          </li>
+        </ul>
+
+        <!-- Googleマップ対策 -->
+        <p class="font-black text-sm tracking-widest mb-4" style="color:var(--text-main);">Googleマップ対策</p>
+        <ul class="mb-6 flex flex-col gap-0">
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>プロフィール最適化
+          </li>
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>週1〜2回の定期投稿
+          </li>
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>口コミ対策・返信管理
+          </li>
+        </ul>
+
+        <!-- 撮影・分析レポート -->
+        <p class="font-black text-sm tracking-widest mb-4" style="color:var(--text-main);">撮影・分析レポート</p>
+        <ul class="mb-6 flex flex-col gap-0">
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>3ヶ月に1回の現地撮影込み
+          </li>
+          <li class="flex items-center gap-3 py-3"
+              style="border-bottom:1px solid #f0f0f0;color:var(--text-main);font-size:.9rem;">
+            <span class="accent-text font-black">✓</span>毎月の成果報告
+          </li>
+        </ul>
+
+        <!-- バッジ -->
+        <div class="flex flex-wrap gap-3 mb-8">
+          <span class="inline-block px-4 py-2 font-bold text-xs rounded-full"
+                style="background:rgba(230,104,60,.08);color:var(--accent);">3ヶ月間無料</span>
+          <span class="inline-block px-4 py-2 font-bold text-xs rounded-full"
+                style="background:rgba(230,104,60,.08);color:var(--accent);">先着5店舗限定</span>
+          <span class="inline-block px-4 py-2 font-bold text-xs rounded-full"
+                style="background:rgba(230,104,60,.08);color:var(--accent);">4ヶ月目以降 月額55,000円</span>
+        </div>
+
+        <!-- オプション -->
+        <div class="pt-6" style="border-top:1px solid #e5e7eb;">
+          <p class="font-black text-sm tracking-widest mb-4" style="color:var(--text-sub);">オプション</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="inline-block px-3 py-1.5 text-xs font-bold rounded-full"
+                  style="border:1px solid #e5e7eb;color:var(--text-sub);">Instagramストーリーズ運用</span>
+            <span class="inline-block px-3 py-1.5 text-xs font-bold rounded-full"
+                  style="border:1px solid #e5e7eb;color:var(--text-sub);">X / Threads / FB / TikTok 追加配信</span>
+            <span class="inline-block px-3 py-1.5 text-xs font-bold rounded-full"
+                  style="border:1px solid #e5e7eb;color:var(--text-sub);">SNS広告 / SEO対策（AI対策含む）</span>
+            <span class="inline-block px-3 py-1.5 text-xs font-bold rounded-full"
+                  style="border:1px solid #e5e7eb;color:var(--text-sub);">Webサイト作成</span>
+            <span class="inline-block px-3 py-1.5 text-xs font-bold rounded-full"
+                  style="border:1px solid #e5e7eb;color:var(--text-sub);">LINE運用</span>
+            <span class="inline-block px-3 py-1.5 text-xs font-bold rounded-full"
+                  style="border:1px solid #e5e7eb;color:var(--text-sub);">インフルエンサー投稿依頼</span>
+          </div>
+        </div>
+
+        <p class="leading-loose mt-6" style="font-size:.8125rem;color:var(--text-sub);">
+          3ヶ月間は完全無料です。4ヶ月目以降は月額55,000円（税込）となりますが、継続するかどうかは3ヶ月間の成果を見てからご判断いただけます。お店に合わないと感じられたら、無理に続ける必要はありませんので、ご安心ください。
+        </p>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  ROI（薄ウォーム系グラデーション背景）
+════════════════════════════════════ -->
+<section style="background:linear-gradient(180deg, rgba(188,24,136,.05), rgba(204,35,102,.06), rgba(230,104,60,.08), rgba(240,148,51,.05));" class="py-24 px-6 section-pad">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- 見出し -->
+    <div class="rv mb-14 text-center">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">費用対効果</p>
+      <h2 class="font-black leading-snug mb-4"
+          style="font-size:clamp(1.25rem,3.5vw,2rem);color:var(--text-main);">
+        費用ゼロで始められる。<br><span class="accent-text">続けるほど、常連客が積み上がる。</span>
+      </h2>
+      <p class="leading-loose mx-auto" style="font-size:.9375rem;color:var(--text-sub);max-width:32em;">
+        SNS集客は、続けるほど常連客が増えていく仕組みです。<br>試算では、2年目の前半から費用を上回る利益が見込めます。
+      </p>
+    </div>
+
+    <!-- 利益シミュレーショングラフ -->
+    <div class="rv" style="padding:3px;background:var(--ig-gradient);border-radius:22px;">
+      <div class="roi-graph-inner" style="background:#fff;border-radius:19px;padding:2.5rem;">
+        <p class="font-black tracking-widest mb-6 roi-graph-title" style="font-size:1.25rem;color:var(--text-main);">5年間で増える利益のイメージ</p>
+
+        <!-- SVG線グラフ（2本線：累計粗利 vs 累計費用） -->
+        <!-- 累計粗利: 0→54.5万→214万→466万→790万→1189万 -->
+        <!-- 累計費用: 0→66万→132万→198万→264万→330万 -->
+        <!-- Y軸: 0=220, 1200万=30 → 1万あたり(220-30)/1200=0.158px -->
+        <!-- X軸: 開始=80, 1年=178, 2年=276, 3年=374, 4年=472, 5年=570 -->
+        <!-- 粗利Y: 0→220, 54.5→211, 214→186, 466→146, 790→95, 1189→32 -->
+        <!-- 費用Y: 0→220, 66→210, 132→199, 198→189, 264→178, 330→168 -->
+        <div style="position:relative;width:100%;overflow-x:auto;">
+          <svg viewBox="0 0 620 260" style="width:100%;min-width:480px;height:auto;" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="line-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#f09433"/>
+                <stop offset="50%" stop-color="#dc2743"/>
+                <stop offset="100%" stop-color="#bc1888"/>
+              </linearGradient>
+              <linearGradient id="area-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#e6683c" stop-opacity=".15"/>
+                <stop offset="100%" stop-color="#e6683c" stop-opacity=".02"/>
+              </linearGradient>
+            </defs>
+
+            <!-- グリッド線（横） -->
+            <line x1="80" y1="30" x2="580" y2="30" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="68" x2="580" y2="68" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="106" x2="580" y2="106" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="144" x2="580" y2="144" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="182" x2="580" y2="182" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="80" y1="220" x2="580" y2="220" stroke="#d1d5db" stroke-width="1.5"/>
+
+            <!-- Y軸ラベル -->
+            <text x="72" y="34" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">1,200万</text>
+            <text x="72" y="72" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">1,000万</text>
+            <text x="72" y="110" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">800万</text>
+            <text x="72" y="148" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">600万</text>
+            <text x="72" y="186" text-anchor="end" fill="#9ca3af" font-size="10" font-family="'Noto Sans JP',sans-serif">400万</text>
+            <text x="72" y="224" text-anchor="end" fill="#9ca3af" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">0</text>
+
+            <!-- エリア塗り（粗利の下） -->
+            <path class="roi-area" d="M80,220 L178,211 L276,186 L374,146 L472,95 L570,32 L570,220 Z"
+                  fill="url(#area-grad)"/>
+
+            <!-- 費用の累計線（グレー破線） -->
+            <polyline class="roi-line" points="80,220 178,210 276,199 374,189 472,178 570,168"
+                      fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="6 4" style="stroke-dasharray:6 4!important;stroke-dashoffset:0!important;"/>
+
+            <!-- 粗利の累計線（グラデーション） -->
+            <polyline class="roi-line" points="80,220 178,211 276,186 374,146 472,95 570,32"
+                      fill="none" stroke="url(#line-grad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- 交差点ラベル（1年目後半・線の上に配置） -->
+            <rect class="roi-label" style="transition-delay:.6s" x="130" y="170" width="110" height="22" rx="4" fill="#dc2743"/>
+            <text class="roi-label" style="transition-delay:.6s" x="185" y="185" text-anchor="middle" fill="#fff" font-size="11" font-weight="900" font-family="'Noto Sans JP',sans-serif">費用回収ライン</text>
+
+            <!-- データポイント＋ラベル（粗利線） -->
+            <circle class="roi-dot" style="transition-delay:.2s" cx="80" cy="220" r="4" fill="#fff" stroke="#f09433" stroke-width="2"/>
+            <text class="roi-label" style="transition-delay:.2s" x="80" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">開始</text>
+
+            <circle class="roi-dot" style="transition-delay:.55s" cx="178" cy="211" r="4" fill="#fff" stroke="#e6683c" stroke-width="2"/>
+            <text class="roi-label" style="transition-delay:.55s" x="178" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">1年目</text>
+
+            <circle class="roi-dot" style="transition-delay:.9s" cx="276" cy="186" r="5" fill="#fff" stroke="#dc2743" stroke-width="2.5"/>
+            <text class="roi-label" style="transition-delay:.9s" x="276" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">2年目</text>
+
+            <circle class="roi-dot" style="transition-delay:1.25s" cx="374" cy="146" r="5" fill="#fff" stroke="#cc2366" stroke-width="2.5"/>
+            <text class="roi-label" style="transition-delay:1.25s" x="374" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">3年目</text>
+
+            <circle class="roi-dot" style="transition-delay:1.55s" cx="472" cy="95" r="5" fill="#fff" stroke="#bc1888" stroke-width="2.5"/>
+            <text class="roi-label" style="transition-delay:1.55s" x="472" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">4年目</text>
+
+            <circle class="roi-dot" style="transition-delay:1.8s" cx="570" cy="32" r="6" fill="#fff" stroke="#bc1888" stroke-width="3"/>
+            <text class="roi-label" style="transition-delay:1.8s" x="570" y="242" text-anchor="middle" fill="#6B7280" font-size="11" font-weight="700" font-family="'Noto Sans JP',sans-serif">5年目</text>
+
+            <!-- 費用ポイント（小さめ） -->
+            <circle class="roi-dot" style="transition-delay:.55s" cx="178" cy="210" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:.9s" cx="276" cy="199" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:1.25s" cx="374" cy="189" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:1.55s" cx="472" cy="178" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle class="roi-dot" style="transition-delay:1.8s" cx="570" cy="168" r="3" fill="#fff" stroke="#9ca3af" stroke-width="1.5"/>
+          </svg>
+        </div>
+
+        <!-- 凡例 -->
+        <div class="flex flex-wrap items-center gap-5 mt-4 pt-4" style="border-top:1px dashed #e5e7eb;">
+          <div class="flex items-center gap-2">
+            <div style="width:24px;height:3px;background:var(--ig-gradient);border-radius:2px;"></div>
+            <p style="font-size:.8rem;color:var(--text-sub);">増える利益の累計</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div style="width:24px;height:0;border-top:2px dashed #9ca3af;"></div>
+            <p style="font-size:.8rem;color:var(--text-sub);">かかる費用の累計</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 注釈（本文と同じサイズで誠実に表示） -->
+    <div class="rv mt-8">
+      <p class="leading-loose" style="font-size:.875rem;color:var(--text-sub);">
+        ※上記は一般的な飲食店のデータをもとにしたシミュレーションです。お店ごとに状況は異なりますので、あくまで参考イメージとしてご覧ください。
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  FAQ（白背景）
+════════════════════════════════════ -->
+<section style="background:var(--bg-white);" class="py-24 px-6 section-pad">
+  <div class="max-w-2xl mx-auto">
+
+    <div class="rv mb-14">
+      <p class="accent-text text-xs font-bold tracking-widest mb-4">よくあるご質問</p>
+      <h2 class="font-black leading-snug"
+          style="font-size:clamp(1.375rem,3.5vw,1.625rem);color:var(--text-main);">
+        始める前に、よく聞かれること
+      </h2>
+    </div>
+
+    <div class="rv flex flex-col gap-4">
+
+      <div class="faq-item" style="padding:2px;background:linear-gradient(135deg,rgba(240,148,51,.3),rgba(230,104,60,.3),rgba(220,39,67,.3),rgba(204,35,102,.3),rgba(188,24,136,.3));border-radius:14px;">
+        <div style="background:#fff;border-radius:12px;">
+          <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
+            <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">SNSの知識がなくても大丈夫ですか？</span>
+            <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-body">
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">まったく問題ありません。企画・撮影・編集・投稿まですべてお任せください。オーナー様にお願いすることは、最初のご相談と3ヶ月に1回の撮影立ち会いのみです。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="padding:2px;background:linear-gradient(135deg,rgba(240,148,51,.3),rgba(230,104,60,.3),rgba(220,39,67,.3),rgba(204,35,102,.3),rgba(188,24,136,.3));border-radius:14px;">
+        <div style="background:#fff;border-radius:12px;">
+          <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
+            <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">効果が出るまでどのくらいかかりますか？</span>
+            <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-body">
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">Googleマップの対策は、一般的に3〜6ヶ月で検索表示回数に変化が出ると言われています。Instagramは3ヶ月目以降が目安です。常連客が積み上がるには6ヶ月〜1年のスパンをお見込みください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="padding:2px;background:linear-gradient(135deg,rgba(240,148,51,.3),rgba(230,104,60,.3),rgba(220,39,67,.3),rgba(204,35,102,.3),rgba(188,24,136,.3));border-radius:14px;">
+        <div style="background:#fff;border-radius:12px;">
+          <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
+            <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">撮影はどのように行いますか？</span>
+            <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-body">
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">3ヶ月に1回、約2〜3時間をまとめて実施。料理・構成は事前打ち合わせで決定し、公開前にオーナー様にご確認いただきます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="padding:2px;background:linear-gradient(135deg,rgba(240,148,51,.3),rgba(230,104,60,.3),rgba(220,39,67,.3),rgba(204,35,102,.3),rgba(188,24,136,.3));border-radius:14px;">
+        <div style="background:#fff;border-radius:12px;">
+          <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
+            <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">契約期間と解約について教えてください。</span>
+            <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-body">
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">3ヶ月間は完全無料です。4ヶ月目以降は月額55,000円（税込）となりますが、継続するかどうかは3ヶ月間の成果を見てからご判断いただけます。お店に合わないと感じられたら、無理に続ける必要はありませんので、ご安心ください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="padding:2px;background:linear-gradient(135deg,rgba(240,148,51,.3),rgba(230,104,60,.3),rgba(220,39,67,.3),rgba(204,35,102,.3),rgba(188,24,136,.3));border-radius:14px;">
+        <div style="background:#fff;border-radius:12px;">
+          <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
+            <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">グルメサイト（ぐるなび・食べログ等）と併用できますか？</span>
+            <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-body">
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">もちろん可能です。グルメサイトを続けながら、GoogleマップとInstagramを新たな集客チャネルとして追加する形になります。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" style="padding:2px;background:linear-gradient(135deg,rgba(240,148,51,.3),rgba(230,104,60,.3),rgba(220,39,67,.3),rgba(204,35,102,.3),rgba(188,24,136,.3));border-radius:14px;">
+        <div style="background:#fff;border-radius:12px;">
+          <button class="faq-trigger w-full flex items-start gap-4 p-6 text-left" type="button">
+            <span class="accent-text font-black text-lg flex-shrink-0 mt-0.5">Q</span>
+            <span class="font-bold flex-1 leading-snug faq-question" style="font-size:.9375rem;color:var(--text-main);">既にInstagramやGoogleマップを運用している場合はどうなりますか？</span>
+            <span class="faq-icon accent-text font-black text-2xl flex-shrink-0 leading-none mt-0.5">+</span>
+          </button>
+          <div class="faq-body">
+            <p class="px-6 pb-6 leading-loose" style="padding-left:3.5rem;font-size:.875rem;color:var(--text-main);">既にInstagramやGoogleマップを運用されている場合も問題ありません。現在のアカウントの状態を確認した上で、そのまま活かせる場合は投稿やフォロワー・口コミを引き継ぎながら改善していきます。新しく作り直した方が良い場合も、お店に合った形をご提案いたしますのでご安心ください。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  CTA（IGグラデーション背景）
+════════════════════════════════════ -->
+<section style="background:linear-gradient(135deg, rgba(240,148,51,.12), rgba(230,104,60,.12), rgba(220,39,67,.12), rgba(204,35,102,.12), rgba(188,24,136,.12));" class="py-20 px-6 text-center relative overflow-hidden">
+
+  <div class="relative max-w-2xl mx-auto">
+    <div class="rv">
+      <p class="font-bold leading-relaxed mb-5 cta-heading"
+         style="font-size:clamp(1.25rem,4vw,1.65rem);color:var(--text-main);">
+        無料トライアル、残り枠わずかです。
+      </p>
+
+      <div class="cta-btn inline-block mb-8"
+           style="background:linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);border-radius:12px;padding:.75rem 2rem;box-shadow:0 8px 32px rgba(0,0,0,.15);cursor:pointer;transition:opacity .3s ease;">
+        <p class="font-black leading-snug text-white"
+           style="font-size:clamp(1rem,3.5vw,1.75rem);">
+          「無料トライアル希望」と<br class="md:hidden">お声がけください。
+        </p>
+      </div>
+
+      <p class="leading-loose mx-auto" style="font-size:.9375rem;color:var(--text-main);max-width:30em;">
+        費用は一切かかりません。まずはお試しいただき、<br>効果を実感してから続けるかどうかをご判断ください。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════
+  FOOTER（白背景）
+════════════════════════════════════ -->
+<footer style="background:var(--bg-white);border-top:1px solid #e5e7eb;" class="py-8 text-center">
+  <div class="font-black tracking-widest mb-2" style="color:var(--text-main);">
+    繁盛<span class="accent-text">SNS</span>
+  </div>
+  <div class="text-xs" style="color:var(--text-sub);">© 2026 繁盛SNS - 無料トライアルのご案内</div>
+</footer>
+
+
+<script>
+  const obs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+
+  // ROI線グラフアニメーション
+  const chartEl = document.querySelector('.roi-line');
+  if (chartEl) {
+    const chartObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const svg = e.target.closest('svg');
+          svg.querySelectorAll('.roi-line, .roi-area, .roi-dot, .roi-label').forEach(el => el.classList.add('on'));
+          chartObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    chartObs.observe(chartEl);
+  }
+
+  document.querySelectorAll('.faq-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('faq-open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('faq-open'));
+      if (!isOpen) item.classList.add('faq-open');
+    });
+  });
+</script>
+
+
+</body>
+</html>
